@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Raleway:wght@100;400&family=Russo+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Rajdhani&family=Ubuntu:wght@300&display=swap');
+
+/* ###################### Global styles  */
+
+:root {
+    --shadow: #DAA425;
+    --btnBg: #dd9d07;
+    --borderBg: #110e49;
+}
+
+body {
+    background-image: url(../img/game1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: fixed;
+    background-attachment: fixed;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Russo One', sans-serif;
+}
+
+p,
+a,
+li,
+span,
+input,
+label,
+textarea {
+    font-family: 'Raleway', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #8c8a8a;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+/* #################### Form style */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form-wrapper {
+    position: relative;
+    width: 430px;
+    padding: 0px 30px;
+    position: relative;
+    height: 450px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.register-form-wrapper {
+    position: relative;
+    width: 450px;
+    padding: 0px 30px;
+    position: relative;
+    height: 700px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+
+/* Input style */
+.input-group {
+    border-bottom: 1px solid var(--btnBg);
+}
+
+.form-control:focus {
+    color: #264b6f;
+    font-weight: bold;
+    background-color: transparent;
+    border-color: #86b7fe;
+    outline: none;
+    box-shadow: none;
+}
+
+.input-group input,
+.input-group .input-group-text {
+    border: none;
+    background-color: transparent;
+}
+
+/* Checkbox style */
+input[type=checkbox] {
+    accent-color: var(--btnBg);
+}
+
+/* Btn styles */
+.btn-signIn {
+    outline: none;
+    border: 2px solid var(--btnBg);
+    background-color: #fff;
+    padding: 8px;
+    border-radius: 10px;
+    box-shadow: 3px 4px 5px #110e49;
+    font-family: 'Dancing Script', cursive;
+    font-size: medium;
+    font-weight: 700;
+}
+
+.btn-signIn:hover {
+    transition: 1s;
+    color: #fff;
+    background-color: var(--btnBg);
+    box-shadow: 1px 2px 3px #110e49;
+}
+
+/* Account Redirect style */
+.login-form_background {
+    position: absolute;
+    top: 450px;
+    right: 0;
+    z-index: 0;
+    width: 250px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    color: #fff;
+}
+
+.register-form_background {
+    position: absolute;
+    top: 700px;
+    right: 0;
+    z-index: 0;
+    width: 250px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    color: #fff;
+}
+
+/* Footer */
+.login-footer {
+    position: absolute;
+    top: 38rem;
+    bottom: 0;
+    right: 0;
+}
+
+.register-footer {
+    position: absolute;
+    top: 55rem;
+    bottom: 0;
+    right: 0;
+}
+
+p>a {
+    color: #6c757d;
+}
+
+p>a:hover {
+    color: #fff;
+}
+
+
+
+.screen__content {
+    z-index: 1;
+    position: relative;
+    height: 100%;
+}
+
+.screen__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    -webkit-clip-path: inset(0 0 0 0);
+    clip-path: inset(0 0 0 0);
+}
+
+.screen__background__shape {
+    transform: rotate(45deg);
+    position: absolute;
+    margin-top: 80px;
+}
+
+.screen__background__shape1 {
+    transform: rotate(0);
+    height: 12px;
+    width: 280px;
+    background-color: #333;
+    box-shadow: 0px 4px 0px rgb(188, 50, 50);
+    top: 400px;
+    right: 210px;
+    border-radius: 50%;
+    z-index: 130;
+
+}
+
+.screen__background__shape2 {
+    height: 220px;
+    width: 590px;
+    background: var(--box-bg);
+    top: 100px;
+    left: 50px;
+    border-radius: 32px;
+    box-shadow: 0px 0px 25px rgb(188, 50, 50);
+}
+
+.screen__background__shape3 {
+    height: 650px;
+    width: 220px;
+    background-color: var(--box-bg);
+    top: 0px;
+    left: 290px;
+    border-radius: 32px;
+    box-shadow: 0px 0px 25px rgb(188, 50, 50);
+}

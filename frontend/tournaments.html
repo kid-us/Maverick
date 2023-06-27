@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- Bootstrap cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <!-- Bootstrap Icon-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- Animate css -->
+    <link rel="stylesheet" href="css/animate.min.css">
+    <title>Document</title>
+</head>
+
+<body class="bg">
+    <!-- Navbar -->
+    <div id="navbar" class="p-3 px-5">
+        <!-- Large Device navbar -->
+        <div class="d-none d-md-block">
+            <div class="float-start ps-5">
+                <a class="navbar-brand" href="/index.html">
+                    <img src="/img/logolight1.png" alt="logo" width="170px">
+                </a>
+            </div>
+            <div class="float-end pe-5 pt-2 small fw-semibold">
+                <a href="#" class="me-5 bi-search">&nbsp; Search</a>
+
+                <!-- Before Login -->
+                <!-- <a href="/login.html" class="account-link px-4 py-2 small">Register/Login</a> -->
+
+                <!-- After login -->
+                <a href="/games.html" class="cursor me-5">Games</a>
+                <span id="username-link" href="/login.html" class="cursor bi bi-person-fill"> Jon Doe &nbsp;
+                    <span id="icon-link" class="bi bi-caret-down-fill small"></span>
+                </span>
+            </div>
+        </div>
+        <!-- Dashboard dropdown -->
+        <div id="dashboard-links" class="hidden py-3 small pe-3 ps-2">
+            <ul>
+                <li><a href="/dashboard.html" class="">Profile</a></li>
+                <li><a href="/tournaments.html" class="">Tournaments</a></li>
+                <li><a href="/games.html" class="">Games</a></li>
+                <hr class="my-2">
+                <li><a href="/setting.html" class="">Setting</a></li>
+                <hr class="my-2">
+                <li><a href="#" class="">Logout</a></li>
+            </ul>
+        </div>
+
+        <!-- Small device navbar -->
+        <div class="d-block d-md-none">
+            <div class="float-start">
+                <a class="navbar-brand" href="#">
+                    <img src="/img/logolight1.png" alt="logo" width="170px">
+                </a>
+            </div>
+
+            <div class="float-end pt-2 small fw-semibold">
+                <p id="menu-btn" class="bi bi-list ms-1"></p>
+            </div>
+        </div>
+
+        <!-- small device menu modal -->
+        <div class="sm-navbar">
+            <div id="menu-page" class="menu animate__animated animate__bounceInLeft hidden">
+                <span id="close-menu" class="nav-item text-danger fs-1 float-end cursor me-5">&times;</span>
+                <ul class="pe-5">
+                    <li class="nav-item mt-5">
+                        <a class="nav-link active bi bi-search fs-4" aria-current="page" href="#"> &nbsp;Search</a>
+                    </li>
+                    <!-- Before Login -->
+
+                    <!-- <a href="/register.html" class="nav-link account-link px-4 py-2 small">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/login.html" class="nav-link account-link px-4 py-2 small">Login</a>
+                    </li> -->
+
+                    <!-- After Login -->
+                    <ul>
+                        <li><a href="/dashboard.html" class="">Profile</a></li>
+                        <li><a href="/games.html" class="">Games</a></li>
+                        <hr class="my-2">
+                        <li><a href="/setting.html" class="">Setting</a></li>
+                        <hr class="my-2">
+                        <li><a href="#" class="">Logout</a></li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container my-5 fw-semibold">
+        <div class="text-center m-5 small">
+            <p> Hello <span class="text-warning">Jon Doe</span> Welcome to the tournaments pages here you can browse our
+                Tournaments. Enjoy!</p>
+        </div>
+
+        <!-- Tournaments -->
+        <div class="m-lg-5">
+            <p class="fs-4 fw-semibold">Tournaments</p>
+            <div class="row justify-content-center mt-5">
+                <div class="tournament-games col-12 mb-5">
+                    <a href="#">
+                        <img src="/img/freefire.jpg" class="rounded tournament-game-img" alt="">
+                        <div class="row small p-lg-5 pt-3">
+                            <div class="col-lg-3 col-6">
+                                <img src="/img/freefire.jpg" alt="" class="rounded" width="50px">
+                                <p class="fs-6 mt-1">Free Fire</p>
+                            </div>
+                            <div class="col-lg-3 col-6">
+                                <p class="fs-5 fw-semibold">Survive and win money</p>
+                            </div>
+                            <div class="col-lg-3 col-6">
+                                <p class="fs-5 fw-semibold">Remaining 50 from 200 players</p>
+                            </div>
+                            <div class="col-lg-3 col-6">
+                                <p class="fs-5 fw-semibold">Winner price: 10,000</p>
+                                <p class="fs-6 fw-semibold">Entry Fee: 1000 etb</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="tournament-games col-12 mb-5">
+                    <a href="#">
+                        <img src="/img/survival.jpg" class="rounded tournament-game-img" alt="">
+                        <div class="row small p-lg-5 pt-3">
+                            <div class="col-lg-3 col-6">
+                                <img src="/img/survival.jpg" alt="" class="rounded" width="50px">
+                                <p class="fs-6 mt-1">Rules of Survival</p>
+                            </div>
+                            <div class="col-lg-3 col-6">
+                                <p class="fs-5 fw-semibold">Survive and win money</p>
+                            </div>
+                            <div class="col-lg-3 col-6">
+                                <p class="fs-5 fw-semibold">Remaining 50 from 200 players</p>
+                            </div>
+                            <div class="col-lg-3 col-6">
+                                <p class="fs-5 fw-semibold">Winner price: 10,000</p>
+                                <p class="fs-6 fw-semibold">Entry Fee: 1000 etb</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="tournament-games col-12 mb-5">
+                    <a href="#">
+                        <img src="/img/rider.jpg" class="rounded tournament-game-img" alt="">
+                        <div class="row small p-lg-5 pt-3">
+                            <div class="col-lg-3 col-6">
+                                <img src="/img/rider.jpg" alt="" class="rounded" width="50px">
+                                <p class="fs-6 mt-1">Rider</p>
+                            </div>
+                            <div class="col-lg-3 col-6">
+                                <p class="fs-5 fw-semibold">Survive and win money</p>
+                            </div>
+                            <div class="col-lg-3 col-6">
+                                <p class="fs-5 fw-semibold">Remaining 50 from 200 players</p>
+                            </div>
+                            <div class="col-lg-3 col-6">
+                                <p class="fs-5 fw-semibold">Winner price: 10,000</p>
+                                <p class="fs-6 fw-semibold">Entry Fee: 1000 etb</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="tournament-games col-12 mb-5">
+                    <a href="#">
+                        <img src="/img/subwaysurf.jpg" class="rounded tournament-game-img" alt="">
+                        <div class="row small p-lg-5 pt-3">
+                            <div class="col-lg-3 col-6">
+                                <img src="/img/subwaysurf.jpg" alt="" class="rounded" width="50px">
+                                <p class="fs-6 mt-1">Subway Surf</p>
+                            </div>
+                            <div class="col-lg-3 col-6">
+                                <p class="fs-5 fw-semibold">Survive and win money</p>
+                            </div>
+                            <div class="col-lg-3 col-6">
+                                <p class="fs-5 fw-semibold">Remaining 50 from 200 players</p>
+                            </div>
+                            <div class="col-lg-3 col-6">
+                                <p class="fs-5 fw-semibold">Winner price: 10,000</p>
+                                <p class="fs-6 fw-semibold">Entry Fee: 1000 etb</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="p-3">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-2">
+                    <img src="/img/logolight1.png" class="img-fluid mt-3" alt="">
+                </div>
+            </div>
+        </div>
+        <p class="small text-center">
+            <span class="small">&copy; 2023 All right reserved Maverick Habesha</span>
+        </p>
+    </footer>
+
+    <script src="/js/script.js"></script>
+
+</body>
+
+</html>

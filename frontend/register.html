@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/account.css">
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <!-- Bootstrap Icon-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- Country and Flag-->
+    <link rel="stylesheet" href="css/countrySelect.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Register | Maverick Habesha</title>
+</head>
+
+<body>
+    <div class="container fw-semibold small">
+        <!-- Logo -->
+        <h2 class="my-5 text-center">
+            <a href="index.html">
+                <img src="/img/logolight1.png" alt="" width="300px">
+            </a>
+        </h2>
+
+        <!-- Form Container -->
+        <div class="form-container">
+            <div class="register-form-wrapper">
+                <h4 style="text-shadow: 1px 2px 3px gold;" class="text-center p-3 mt-3">
+                    Create your Maverick Habesha account.
+                </h4>
+                <!-- Register Form -->
+                <form action="#" class="pt-3">
+
+                    <label for="username">Username</label>
+                    <div class="input-group mt-2 mb-3">
+                        <span class="bi bi-mic-fill input-group-text"></span>
+                        <input type="text" name="username" id="username" class="form-control">
+                    </div>
+
+                    <label for="email">Email</label>
+                    <div class="input-group mt-2 mb-3">
+                        <span class="bi bi-envelope-fill input-group-text"></span>
+                        <input type="email" name="email" id="email" class="form-control">
+                    </div>
+
+                    <label for="password" class="my-2">Password</label>
+                    <div class="input-group">
+                        <span class="bi bi-lock-fill input-group-text"></span>
+                        <input type="password" name="password" id="password" class="form-control">
+
+                        <span id="password-eye" class="bi bi-eye-slash-fill input-group-text cursor"></span>
+                    </div>
+
+                    <label for="country" class="my-2">Country</label>
+                    <div class="input-group">
+                        <span class="bi bi-flag-fill input-group-text"></span>
+                        <input name="country" id="country" class="form-control" />
+                    </div>
+
+                    <!-- Checkbox -->
+                    <div class="d-flex mt-3">
+                        <input type="checkbox" name="terms" class="cursor">
+                        <p class="small ms-3 pt-3"> I agree to the
+                            <a href="#" class="text-primary"> Maverick Habesha terms of
+                                use.</a>
+                        </p>
+                    </div>
+                    <div class="d-flex w-100">
+                        <input type="checkbox" name="age" class="cursor">
+                        <p class="small ms-3 "> I here by certify I am over 18 years old or authorized to use
+                            Maverick Habesha services by my legal representative!
+                        </p>
+                    </div>
+
+                    <button class="btn-signIn px-5 mt-4 w-75 small">Sign Up
+                        <span class="ms-5 bi-caret-right-fill"></span>
+                    </button>
+                </form>
+
+                <!-- Redirect Login -->
+                <div class="register-form_background small mt-5 bg-warning">
+                    <p class="mt-3 ms-5">Already have an account?
+                        <a href="login.html" class="text-primary"> Sign In</a>
+                    </p>
+                </div>
+
+                <!-- Footer -->
+                <footer class="register-footer text-center small">
+                    <p>
+                        <a href="#"> Privacy policy</a> &nbsp;
+                        <a href="#">Cookie policy</a> &nbsp;
+                        <a href="#">Privacy settings</a> &nbsp;
+                        <a href="#">Terms of Use</a> &nbsp; &nbsp;
+                        <a href="#">Maverick Habesha Support</a>
+                    </p>
+                </footer>
+            </div>
+        </div>
+
+        <!-- Password View Script -->
+        <script src="/js/password.js"></script>
+        <!-- Country and Flag Script -->
+        <script src="/js/countrySelect.min.js"></script>
+        <script>
+            $("#country").countrySelect({
+                defaultCountry: "et",
+                preferredCountries: ['et', 'er', 'us'],
+                responsiveDropdown: true,
+            });
+        </script>
+</body>
+
+</html>
