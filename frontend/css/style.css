@@ -77,6 +77,10 @@ div a {
     background: #8c8a8a;
 }
 
+.text-decoration {
+    text-decoration: none;
+}
+
 .bg-gold {
     background: linear-gradient(170deg, #5D54A4, #DAA425);
     /* background-color: #f8e6b0; */
@@ -343,6 +347,7 @@ div a {
     width: 99%;
     object-fit: cover;
     border-radius: 3px;
+    box-shadow: 5px 5px var(--box-bg);
 }
 
 @media (min-width: 768px) {
@@ -442,6 +447,7 @@ footer {
     width: 100%;
     object-fit: cover;
     filter: opacity(40%);
+    box-shadow: 5px 5px var(--box-bg);
 }
 
 .tournament-games img:hover {
@@ -530,4 +536,19 @@ footer {
 
 .gamer-wrapper:active {
     cursor: pointer;
+}
+
+/* Dashboard */
+.dash-titles p {
+    font-size: clamp(12px, 3vw, 15px);
+}
+
+.dash-titles p a:hover {
+    color: gray;
+}
+
+.gradient-text {
+    background: -webkit-linear-gradient(#5D54A4, #DAA425);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
