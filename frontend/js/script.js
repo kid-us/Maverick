@@ -64,6 +64,20 @@ usernameLink.addEventListener("click", () => {
     }
 });
 
+
+//
+const balance = document.getElementById("balance");
+if (balance) {
+    const withdrawBtn = document.getElementById("withdraw-btn");
+    const errorMessage = document.getElementById("error-msg");
+    if (balance.textContent < 1) {
+        withdrawBtn.addEventListener("mouseenter", () => {
+            withdrawBtn.setAttribute("disabled", true)
+            errorMessage.classList.remove("hidden");
+        })
+    }
+}
+
 // Swiper
 var swiper;
 swiper = new Swiper(".swiper", {
