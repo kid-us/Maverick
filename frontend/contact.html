@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <!-- Animate css -->
     <link rel="stylesheet" href="css/animate.min.css">
-    <title>Maverick Games</title>
+    <title>Contact</title>
 </head>
 
 <body class="bg">
@@ -33,6 +33,7 @@
 
                 <!-- After login -->
                 <a href="/tournaments.html" class="cursor me-5">Tournaments</a>
+                <a href="/games.html" class="cursor me-5">Games</a>
                 <span id="username-link" href="/login.html" class="cursor bi bi-person-fill"> Jon Doe &nbsp;
                     <span id="icon-link" class="bi bi-caret-down-fill small"></span>
                 </span>
@@ -40,7 +41,7 @@
         </div>
         <!-- Dashboard dropdown -->
         <div id="dashboard-links" class="hidden py-3 small pe-3 ps-2">
-            <ul class="fw-semibold">
+            <ul>
                 <li><a href="/dashboard.html" class="">Profile</a></li>
                 <li><a href="/tournaments.html" class="">Tournaments</a></li>
                 <li><a href="/games.html" class="">Games</a></li>
@@ -84,6 +85,7 @@
                     <ul>
                         <li><a href="/dashboard.html" class="">Profile</a></li>
                         <li><a href="/tournaments.html" class="">Tournaments</a></li>
+                        <li><a href="/games.html" class="">Games</a></li>
                         <hr class="my-2">
                         <li><a href="/setting.html" class="">Setting</a></li>
                         <hr class="my-2">
@@ -94,56 +96,58 @@
         </div>
     </div>
 
-    <!-- Games -->
-    <div class="container my-5 fw-semibold">
-        <div class="text-center m-5 small">
-            <p> Hello <span class="text-warning">Jon Doe</span> Welcome to the Maverick games portal pages here you can
-                browse our
-                Games. Enjoy! </p>
-        </div>
+    <!-- Contact -->
+    <div class="container my-5 py-5">
+        <div class="row justify-content-center">
+            <!-- Contact Info -->
+            <div class="col-lg-6 col-md-6 col-12">
+                <div class="p-5 my-5">
+                    <p class="display-6 fw-semibold gradient-text">Let's talk about everything.</p>
+                    <div class="my-5 text-center fw-semibold">
+                        <p class="fs-3 fw-semibold ">Adiss Abeba</p>
 
-        <!-- Games -->
-        <section class="container my-5 py-5">
-            <p class="fs-5 fw-semibold">Play Games</p>
-            <div class="row justify-content-center mt-5">
-                <div class="popular-games col-lg-4 col-md-6 col-12 mb-5">
-                    <a href="#">
-                        <img src="/img/poker.jpg" class="game-img" alt="">
-                        <div class="game-info text-center">
-                            <h3>Play Now</h3>
-                            <p class="m-0 fw-semibold">
-                                <span class="me-5">Bid: 1,000</span>
-                                <span class="">Price Money: 5000</span>
-                            </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="popular-games col-lg-4 col-md-6 col-12 mb-5">
-                    <a href="#">
-                        <img src="/img/black jack.jpg" class="game-img" alt="">
-                        <div class="game-info text-center">
-                            <h3>Play Now</h3>
-                            <p class="m-0 fw-semibold">
-                                <span class="me-5">Bid: 1,000</span>
-                                <span class="">Price Money: 5000</span>
-                            </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="popular-games col-lg-4 col-md-6 col-12 mb-5">
-                    <a href="#">
-                        <img src="/img/chess.jpg" class="game-img" alt="">
-                        <div class="game-info text-center">
-                            <h3>Play Now</h3>
-                            <p class="m-0 fw-semibold">
-                                <span class="me-5">Bid: 1,000</span>
-                                <span class="">Price Money: 5000</span>
-                            </p>
-                        </div>
-                    </a>
+                        <p class="fs-3 fw-semibold mt-5">Contact Info</p>
+                        <p>
+                            <span class="bi bi-phone-fill"> +251912345678</span>
+                        </p>
+                        <p>
+                            <span class="bi bi-envelope-fill"> maverick2@habesha.com</span>
+                        </p>
+
+                    </div>
                 </div>
             </div>
-        </section>
+
+            <!-- Contact Form -->
+            <div class="col-lg-6 col-md-6 col-12 px-5 shadow-lg px-5 rounded py-3">
+                <p class="gradient-text display-6 fw-semibold text-center">Fill the form it's easy.</p>
+                <form action="#" method="#">
+                    <div class="row mt-5">
+                        <div class="col-6 small fw-semibold">
+                            <label for="first-name">First Name</label>
+                            <input type="text" name="fname" id="fname" class="form-control my-3">
+                        </div>
+                        <div class="col-6 small fw-semibold">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" name="lname" id="lname" class="form-control my-3">
+                        </div>
+                        <div class="col-12 small fw-semibold">
+                            <label for="emial">Email</label>
+                            <input type="email" name="email" id="email" class="form-control my-3">
+                        </div>
+                        <div class="col-12 small fw-semibold">
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message" cols="20" rows="8" class="form-control my-3"
+                                style="resize: none;"></textarea>
+                        </div>
+
+                        <div class="col-12 mt-4">
+                            <button class="btns px-5 small">Send Message</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 
     <!-- Footer -->
