@@ -81,6 +81,16 @@ div a {
     text-decoration: none;
 }
 
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
 .bg-gold {
     background: linear-gradient(170deg, #5D54A4, #DAA425);
     /* background-color: #f8e6b0; */
@@ -466,6 +476,16 @@ footer {
     text-shadow: 1px 1px #878787;
 }
 
+#tournament-modal {
+    position: fixed;
+    width: 85%;
+    height: 90vh;
+    top: 8%;
+    left: 7%;
+    overflow-y: scroll;
+    background-color: var(--secondary-color);
+    z-index: 3;
+}
 
 /* Table  */
 .custom-table {
@@ -518,8 +538,7 @@ footer {
     padding: 0;
 }
 
-
-/* Winners */
+/* Top Gamers */
 .swiper-pagination-bullet-active {
     background-color: var(--btnBg) !important;
 }
