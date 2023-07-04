@@ -94,6 +94,12 @@
         </div>
     </div>
 
+    <div id="overlay" class="hidden"></div>
+
+    <div id="tournament-modal" class="p-4 hidden rounded shadow-lg">
+        <p id="close-modal" class="text-end text-danger fw-semibold fs-5 cursor">x</p>
+    </div>
+
     <!-- Tournaments -->
     <div class="container my-5 fw-semibold">
         <div class="text-center m-5 small">
@@ -105,92 +111,98 @@
         <div class="m-lg-5">
             <p class="fs-5 fw-semibold">Tournaments</p>
             <div class="row justify-content-center mt-5">
-                <div class="tournament-games col-12 mb-5">
-                    <a href="#">
-                        <img src="/img/freefire.jpg" class="rounded tournament-game-img" alt="">
-                        <div class="row small p-lg-5 pt-3">
-                            <div class="col-lg-3 col-6">
-                                <img src="/img/freefire.jpg" alt="" class="rounded" width="50px">
-                                <p class="fs-6 mt-1">Free Fire</p>
-                            </div>
-                            <div class="col-lg-3 col-6">
-                                <p class="fs-5 fw-semibold">Survive and win money</p>
-                            </div>
-                            <div class="col-lg-3 col-6">
-                                <p class="fs-5 fw-semibold">Remaining 50 from 200 players</p>
-                            </div>
-                            <div class="col-lg-3 col-6">
-                                <p class="fs-5 fw-semibold">Winner price: 10,000</p>
-                                <p class="fs-6 fw-semibold">Entry Fee: 1000 etb</p>
-                            </div>
+                <div class="tournament-games col-12 mb-5 cursor">
+                    <img src="/img/freefire.jpg" class="rounded tournament-game-img" alt="Tournament"
+                        data-name="Free Fire" data-bid="1,000" data-price="10,000"
+                        data-description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus animi ea nisi voluptatum doloribus nihil ad perferendis aspernatur qui quos aliquid eius facilis corrupti dolores, sit suscipit voluptas velit dolorum."
+                        data-img="freefire.jpg" data-tutorial="freefire.jpg">
+
+                    <div class="row small p-lg-5 pt-3">
+                        <div class="col-lg-3 col-6">
+                            <img src="/img/freefire.jpg" alt="" class="rounded" width="50px">
+                            <p class="fs-6 mt-1">Free Fire</p>
                         </div>
-                    </a>
+                        <div class="col-lg-3 col-6">
+                            <p class="fs-5 fw-semibold">Survive and win money</p>
+                        </div>
+                        <div class="col-lg-3 col-6">
+                            <p class="fs-5 fw-semibold">Remaining 50 from 200 players</p>
+                        </div>
+                        <div class="col-lg-3 col-6">
+                            <p class="fs-5 fw-semibold">Winner price: 10,000</p>
+                            <p class="fs-6 fw-semibold">Entry Fee: 1000 etb</p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="tournament-games col-12 mb-5">
-                    <a href="#">
-                        <img src="/img/survival.jpg" class="rounded tournament-game-img" alt="">
-                        <div class="row small p-lg-5 pt-3">
-                            <div class="col-lg-3 col-6">
-                                <img src="/img/survival.jpg" alt="" class="rounded" width="50px">
-                                <p class="fs-6 mt-1">Rules of Survival</p>
-                            </div>
-                            <div class="col-lg-3 col-6">
-                                <p class="fs-5 fw-semibold">Survive and win money</p>
-                            </div>
-                            <div class="col-lg-3 col-6">
-                                <p class="fs-5 fw-semibold">Remaining 50 from 200 players</p>
-                            </div>
-                            <div class="col-lg-3 col-6">
-                                <p class="fs-5 fw-semibold">Winner price: 10,000</p>
-                                <p class="fs-6 fw-semibold">Entry Fee: 1000 etb</p>
-                            </div>
+                <div class="tournament-games col-12 mb-5 cursor">
+                    <img src="/img/survival.jpg" class="rounded tournament-game-img" alt="Tournament"
+                        data-name="Rules of Survival" data-bid="1,000" data-price="80,000"
+                        data-description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus animi ea nisi voluptatum doloribus nihil ad perferendis aspernatur qui quos aliquid eius facilis corrupti dolores, sit suscipit voluptas velit dolorum."
+                        data-img="survival.jpg" data-tutorial="survival.jpg">
+                    <div class=" row small p-lg-5 pt-3">
+                        <div class="col-lg-3 col-6">
+                            <img src="/img/survival.jpg" alt="" class="rounded" width="50px">
+                            <p class="fs-6 mt-1">Rules of Survival</p>
                         </div>
-                    </a>
+                        <div class="col-lg-3 col-6">
+                            <p class="fs-5 fw-semibold">Survive and win money</p>
+                        </div>
+                        <div class="col-lg-3 col-6">
+                            <p class="fs-5 fw-semibold">Remaining 50 from 200 players</p>
+                        </div>
+                        <div class="col-lg-3 col-6">
+                            <p class="fs-5 fw-semibold">Winner price: 10,000</p>
+                            <p class="fs-6 fw-semibold">Entry Fee: 1000 etb</p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="tournament-games col-12 mb-5">
-                    <a href="#">
-                        <img src="/img/rider.jpg" class="rounded tournament-game-img" alt="">
-                        <div class="row small p-lg-5 pt-3">
-                            <div class="col-lg-3 col-6">
-                                <img src="/img/rider.jpg" alt="" class="rounded" width="50px">
-                                <p class="fs-6 mt-1">Rider</p>
-                            </div>
-                            <div class="col-lg-3 col-6">
-                                <p class="fs-5 fw-semibold">Survive and win money</p>
-                            </div>
-                            <div class="col-lg-3 col-6">
-                                <p class="fs-5 fw-semibold">Remaining 50 from 200 players</p>
-                            </div>
-                            <div class="col-lg-3 col-6">
-                                <p class="fs-5 fw-semibold">Winner price: 10,000</p>
-                                <p class="fs-6 fw-semibold">Entry Fee: 1000 etb</p>
-                            </div>
+                <div class="tournament-games col-12 mb-5 cursor">
+                    <img src="/img/rider.jpg" class="rounded tournament-game-img" alt="Tournament" data-name="Rider"
+                        data-bid="1,000" data-price="20,000"
+                        data-description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus animi ea nisi voluptatum doloribus nihil ad perferendis aspernatur qui quos aliquid eius facilis corrupti dolores, sit suscipit voluptas velit dolorum."
+                        data-img="rider.jpg" data-tutorial="rider.jpg">
+
+                    <div class="row small p-lg-5 pt-3">
+                        <div class="col-lg-3 col-6">
+                            <img src="/img/rider.jpg" alt="" class="rounded" width="50px">
+                            <p class="fs-6 mt-1">Rider</p>
                         </div>
-                    </a>
+                        <div class="col-lg-3 col-6">
+                            <p class="fs-5 fw-semibold">Survive and win money</p>
+                        </div>
+                        <div class="col-lg-3 col-6">
+                            <p class="fs-5 fw-semibold">Remaining 50 from 200 players</p>
+                        </div>
+                        <div class="col-lg-3 col-6">
+                            <p class="fs-5 fw-semibold">Winner price: 10,000</p>
+                            <p class="fs-6 fw-semibold">Entry Fee: 1000 etb</p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="tournament-games col-12 mb-5">
-                    <a href="#">
-                        <img src="/img/subwaysurf.jpg" class="rounded tournament-game-img" alt="">
-                        <div class="row small p-lg-5 pt-3">
-                            <div class="col-lg-3 col-6">
-                                <img src="/img/subwaysurf.jpg" alt="" class="rounded" width="50px">
-                                <p class="fs-6 mt-1">Subway Surf</p>
-                            </div>
-                            <div class="col-lg-3 col-6">
-                                <p class="fs-5 fw-semibold">Survive and win money</p>
-                            </div>
-                            <div class="col-lg-3 col-6">
-                                <p class="fs-5 fw-semibold">Remaining 50 from 200 players</p>
-                            </div>
-                            <div class="col-lg-3 col-6">
-                                <p class="fs-5 fw-semibold">Winner price: 10,000</p>
-                                <p class="fs-6 fw-semibold">Entry Fee: 1000 etb</p>
-                            </div>
+                <div class="tournament-games col-12 mb-5 cursor">
+                    <img src="/img/subwaysurf.jpg" class="rounded tournament-game-img" alt="Tournament"
+                        data-name="Subway Surf" data-bid="1,000" data-price="60,000"
+                        data-description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus animi ea nisi voluptatum doloribus nihil ad perferendis aspernatur qui quos aliquid eius facilis corrupti dolores, sit suscipit voluptas velit dolorum."
+                        data-img="subwaysurf.jpg" data-tutorial="subwaysurf.jpg">
+                    <div class=" row small p-lg-5 pt-3">
+                        <div class="col-lg-3 col-6">
+                            <img src="/img/subwaysurf.jpg" alt="" class="rounded" width="50px">
+                            <p class="fs-6 mt-1">Subway Surf</p>
                         </div>
-                    </a>
+                        <div class="col-lg-3 col-6">
+                            <p class="fs-5 fw-semibold">Survive and win money</p>
+                        </div>
+                        <div class="col-lg-3 col-6">
+                            <p class="fs-5 fw-semibold">Remaining 50 from 200 players</p>
+                        </div>
+                        <div class="col-lg-3 col-6">
+                            <p class="fs-5 fw-semibold">Winner price: 10,000</p>
+                            <p class="fs-6 fw-semibold">Entry Fee: 1000 etb</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -223,7 +235,8 @@
     </footer>
 
     <script src="/js/script.js"></script>
-
+    <script src="/js/jar.amd.min.js"></script>
+    <script src="/js/cookie.js"></script>
 </body>
 
 </html>
