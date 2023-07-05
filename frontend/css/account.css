@@ -11,10 +11,10 @@
 }
 
 body {
-    background-image: url(../img/game1.jpg);
+    background-image: url(../img/table-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: fixed;
+    background-position: center;
     background-attachment: fixed;
 }
 
