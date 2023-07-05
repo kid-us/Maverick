@@ -10,6 +10,10 @@ tournamentDetail.forEach(function (add) {
         const tournamentPrice = this.children[0].getAttribute("data-price");
         const tournamentDescription = this.children[0].getAttribute("data-description");
         const tournamentTutorial = this.children[0].getAttribute("data-tutorial");
+        const tournamentFirstWinner = this.children[0].getAttribute("data-first");
+        const tournamentSecondWinner = this.children[0].getAttribute("data-second");
+        const tournamentThirdWinner = this.children[0].getAttribute("data-third");
+        const tournamentOthersWinner = this.children[0].getAttribute("data-others");
 
         const tournament = jar.get("tournament");
 
@@ -22,6 +26,10 @@ tournamentDetail.forEach(function (add) {
                     image: tournamentImage,
                     description: tournamentDescription,
                     tutorial: tournamentTutorial,
+                    first: tournamentFirstWinner,
+                    second: tournamentSecondWinner,
+                    third: tournamentThirdWinner,
+                    others: tournamentOthersWinner,
                 },
             };
             jar.set("tournament", JSON.stringify(data));
@@ -35,6 +43,10 @@ tournamentDetail.forEach(function (add) {
                     image: tournamentImage,
                     description: tournamentDescription,
                     tutorial: tournamentTutorial,
+                    first: tournamentFirstWinner,
+                    second: tournamentSecondWinner,
+                    third: tournamentThirdWinner,
+                    others: tournamentOthersWinner,
                 },
             };
             jar.set("tournament", JSON.stringify(data));
@@ -55,6 +67,10 @@ tournamentDetail.forEach(function (add) {
             const tournamentBid = tournamentData[data].bid;
             const tournamentImg = tournamentData[data].image;
             const tournamentDescription = tournamentData[data].description;
+            const tournamentFirst = tournamentData[data].first;
+            const tournamentSecond = tournamentData[data].second;
+            const tournamentThird = tournamentData[data].third;
+            const tournamentOthers = tournamentData[data].others;
             const tournamentTutorial = tournamentData[data].tutorial;
 
             // Modals
@@ -83,19 +99,19 @@ tournamentDetail.forEach(function (add) {
             div5.className = "col-lg-6 col-12";
 
             const form = document.createElement("form");
-            form.setAttribute("action", "#");
+            form.setAttribute("action", "/proceed.html");
             form.setAttribute("method", "#");
 
             const input1 = document.createElement("input");
-            input1.setAttribute("hidden", true);
-            input1.setAttribute("name", "bid");
             input1.setAttribute("type", "text");
+            input1.setAttribute("name", "bid");
+            input1.setAttribute("hidden", true);
             input1.setAttribute("value", tournamentBid);
 
             const input2 = document.createElement("input");
-            input2.setAttribute("hidden", true);
-            input2.setAttribute("name", "name");
             input2.setAttribute("type", "text");
+            input2.setAttribute("name", "name");
+            input2.setAttribute("hidden", true);
             input2.setAttribute("value", tournamentName);
 
             const button = document.createElement("button");
@@ -106,7 +122,23 @@ tournamentDetail.forEach(function (add) {
             bid.innerText = "Entry Bid : " + tournamentBid;
 
             const winMoney = document.createElement("p");
-            winMoney.innerText = "Price Money : " + tournamentPrice;
+            winMoney.innerText = "Price Money Pool: " + tournamentPrice;
+
+            const first = document.createElement("p");
+            first.className = "ms-4 text-warning";
+            first.innerText = "1ST: " + tournamentFirst + " ETB";
+
+            const second = document.createElement("p");
+            second.className = "ms-4 text-warning";
+            second.innerText = "2ND: " + tournamentSecond + " ETB";
+
+            const third = document.createElement("p");
+            third.className = "ms-4 text-warning";
+            third.innerText = "3RD: " + tournamentThird + " ETB";
+
+            const others = document.createElement("p");
+            others.className = "ms-4 text-warning";
+            others.innerText = "4TH and UPTO 20: " + tournamentOthers + " ETB";
 
             const description = document.createElement("p");
             description.innerText = "Description";
@@ -115,7 +147,7 @@ tournamentDetail.forEach(function (add) {
             descriptionNote.innerText = tournamentDescription;
 
             const tutorial = document.createElement("p");
-            tutorial.innerText = "Tutorial";
+            tutorial.innerText = "How to Play";
 
             const tutorialVideo = document.createElement("video");
             tutorialVideo.setAttribute("src", "/img/Maverick.mp4");
@@ -138,6 +170,10 @@ tournamentDetail.forEach(function (add) {
 
             div2.appendChild(bid);
             div2.appendChild(winMoney);
+            div2.appendChild(first);
+            div2.appendChild(second);
+            div2.appendChild(third);
+            div2.appendChild(others);
             div2.appendChild(description);
             div2.appendChild(descriptionNote);
             div2.appendChild(tutorial);
