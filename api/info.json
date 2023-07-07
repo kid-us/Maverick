@@ -1,0 +1,20 @@
+{
+  "id": "Game id",
+  "name": "Game name",
+  "description": "Game description",
+  "entryFee": "Game entry fee",
+  "prize": "Game prize",
+  "startDate": "Game start date",
+  "numberOfPlayers": "Game number of players",
+  "numberOfPlayersJoined": "Game number of players joined",
+  "numberOfPlayersLeft": "Game number of players left"
+}
+
+{
+    "usernmae": "User username",
+    "password": "User password",
+    "email": "User email",
+    "firstName": "User first name",
+    "lastName": "User last name",
+    "phoneNumber": "User phone number",
+}

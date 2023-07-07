@@ -31,4 +31,4 @@ class User(db.Model):
 
     def __repr__(self):
         """Return a string representation of the user model"""
-        return "<User {}-{}>".format(self.username, self.firstname)
+        return "<User {}-{}>".format(self.username, self.username)
