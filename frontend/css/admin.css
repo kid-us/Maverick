@@ -1,0 +1,291 @@
+/* All css */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Raleway:wght@100;400&family=Russo+One&display=swap');
+
+:root {
+    --body-color: #F8F8F8;
+    --main-color: #fff;
+    --shadow: #DAA425;
+    --border: #110e49;
+    --btnBg: #40798C;
+}
+
+html,
+body {
+    background-color: var(--body-color);
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    transition: 1s;
+}
+
+.bg {
+    background-color: var(--main-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Russo One', sans-serif;
+}
+
+p,
+a,
+li,
+span,
+input,
+label,
+textarea {
+    font-family: 'Raleway', sans-serif;
+}
+
+table,
+th,
+td,
+tr,
+thead {
+    font-family: 'Raleway', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #8c8a8a;
+}
+
+.hidden {
+    display: none;
+}
+
+a:hover {
+    color: #000;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+p a:hover {
+    color: #000;
+}
+
+li a {
+    text-decoration: none;
+    color: #000;
+}
+
+li a:hover {
+    color: #000;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.border-error {
+    border: 1px solid red;
+    border-radius: 5px;
+    padding-left: 20px;
+}
+
+/* sidebar */
+
+#sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    width: auto;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.316);
+}
+
+.sidebar {
+    color: #fff;
+    background-color: #222424;
+    height: 100vh;
+    position: fixed;
+}
+
+.sm-sidebar {
+    overflow: hidden;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 250px;
+    color: #fff;
+    z-index: 10;
+    background-color: #222424;
+}
+
+.navbar {
+    position: fixed;
+    top: 23px;
+    right: 80px;
+    z-index: 2;
+    background-color: #fff;
+    padding: 10px 40px;
+}
+
+
+.contents {
+    margin-top: 6rem;
+}
+
+@media (min-width: 576px) {
+    .contents {
+        margin-left: 0px;
+    }
+}
+
+@media (min-width: 768px) {
+    .contents {
+        margin-left: 100px;
+    }
+}
+
+@media (min-width: 992px) {
+    .contents {
+        margin-left: 280px;
+    }
+}
+
+/*  */
+
+.img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.imgs {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+}
+
+.close-btn {
+    /* background-color: #fff; */
+    color: red;
+    font-size: larger;
+    background: transparent;
+    border: none;
+
+}
+
+.form-floating input:focus,
+.form-floating select:focus {
+    background-color: transparent;
+    border-color: #86b7fe;
+    outline: none;
+    box-shadow: none;
+}
+
+.form-floating {
+    border: 2px solid var(--btnBg);
+    border-radius: 5px;
+}
+
+.form-floating input,
+.form-floating textarea {
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+
+.btn-donate {
+    outline: none;
+    border: 1px solid var(--shadow);
+    background-color: var(--btnBg);
+    padding: 8px;
+    color: #fff;
+    border-radius: 4px;
+    box-shadow: 3px 4px 5px #110e49;
+    font-size: medium;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.btn-donate:hover {
+    transition: 1s;
+    color: #fff;
+    background-color: var(--btnBg);
+    box-shadow: 1px 2px 3px #110e49;
+}
+
+.btn {
+    font-size: smaller;
+}
+
+/* Table  */
+.custom-table thead tr,
+.custom-table thead th {
+    padding-bottom: 30px;
+    border-top: none;
+    border-bottom: none !important;
+    color: #fff;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+}
+
+.custom-table tbody th,
+.custom-table tbody td {
+    color: #fff;
+    font-weight: 400;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    font-weight: 300;
+    border: none;
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease;
+}
+
+.custom-table tbody tr {
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease;
+}
+
+.custom-table tbody tr:hover td,
+.custom-table tbody tr:focus td {
+    color: #fff;
+}
+
+.custom-table .td-box-wrap {
+    padding: 0;
+}
+
+.custom-table {
+    /* background: #fff; */
+    border-radius: 4px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+}
+
+.custom-table .box td,
+.custom-table .box th {
+    border: none !important;
+    color: #000;
+}

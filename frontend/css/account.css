@@ -11,10 +11,10 @@
 }
 
 body {
-    background-image: url(../img/game1.jpg);
+    background-image: url(../img/table-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: fixed;
+    background-position: center;
     background-attachment: fixed;
 }
 
@@ -52,6 +52,10 @@ a {
 
 ::-webkit-scrollbar-thumb {
     background: #8c8a8a;
+}
+
+.text-decoration {
+    text-decoration: none;
 }
 
 .cursor {
@@ -160,13 +164,15 @@ input[type=checkbox] {
     top: 38rem;
     bottom: 0;
     right: 0;
+    left: 0;
 }
 
 .register-footer {
     position: absolute;
-    top: 55rem;
+    top: 53rem;
     bottom: 0;
     right: 0;
+    left: 0;
 }
 
 p>a {
