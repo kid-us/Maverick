@@ -2,11 +2,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Raleway:wght@100;400&family=Russo+One&display=swap');
 
 :root {
-    --body-color: #F8F8F8;
+    /* --body-color: #1C1C1C;
     --main-color: #fff;
     --shadow: #DAA425;
     --border: #110e49;
-    --btnBg: #40798C;
+    --btnBg: #40798C; */
+
+    --main-color: #1C1C1C;
+    --secondary-color: #262525;
+    --box-bg: #DAA425;
+    --btnBg: #dd9d07;
+    --borderBg: #110e49;
 }
 
 html,
@@ -23,6 +29,10 @@ body {
 
 .bg {
     background-color: var(--main-color);
+}
+
+.bg2 {
+    background-color: var(--secondary-color);
 }
 
 h1,
@@ -120,7 +130,7 @@ li a:hover {
 
 .sidebar {
     color: #fff;
-    background-color: #222424;
+    background-color: var(--main-color);
     height: 100vh;
     position: fixed;
 }
@@ -144,6 +154,17 @@ li a:hover {
     z-index: 2;
     background-color: #fff;
     padding: 10px 40px;
+}
+
+.notification-modal {
+    position: fixed;
+    top: 90px;
+    right: 150px;
+    z-index: 2;
+    background-color: #fff;
+    height: 450px;
+    width: 400px;
+    overflow: scroll;
 }
 
 
@@ -192,12 +213,13 @@ li a:hover {
 
 }
 
-.form-floating input:focus,
+/* .form-floating input:focus,
 .form-floating select:focus {
     background-color: transparent;
     border-color: #86b7fe;
     outline: none;
     box-shadow: none;
+    color: #fff;
 }
 
 .form-floating {
@@ -210,9 +232,9 @@ li a:hover {
     border: none;
     background-color: transparent;
     outline: none;
-}
+} */
 
-.btn-donate {
+.btns {
     outline: none;
     border: 1px solid var(--shadow);
     background-color: var(--btnBg);
@@ -225,7 +247,7 @@ li a:hover {
     text-decoration: none;
 }
 
-.btn-donate:hover {
+.btns:hover {
     transition: 1s;
     color: #fff;
     background-color: var(--btnBg);
@@ -237,12 +259,20 @@ li a:hover {
 }
 
 /* Table  */
+.custom-table {
+    background-color: var(--main-color);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 4px 40px 49px #dd9d07;
+}
+
 .custom-table thead tr,
 .custom-table thead th {
     padding-bottom: 30px;
     border-top: none;
     border-bottom: none !important;
-    color: #fff;
+    color: #DAA425;
     font-size: 11px;
     text-transform: uppercase;
     letter-spacing: .2rem;
@@ -261,10 +291,8 @@ li a:hover {
     transition: .3s all ease;
 }
 
-.custom-table tbody tr {
-    -webkit-transition: .3s all ease;
-    -o-transition: .3s all ease;
-    transition: .3s all ease;
+.custom-table tbody tr:nth-child(odd) {
+    background-color: var(--main-color);
 }
 
 .custom-table tbody tr:hover td,
@@ -272,20 +300,17 @@ li a:hover {
     color: #fff;
 }
 
+.custom-table tbody tr:hover td a,
+.custom-table tbody tr:focus td a {
+    color: #fdd114;
+}
+
 .custom-table .td-box-wrap {
     padding: 0;
 }
 
-.custom-table {
-    /* background: #fff; */
-    border-radius: 4px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-
-}
-
-.custom-table .box td,
-.custom-table .box th {
-    border: none !important;
-    color: #000;
+/* Manage Tournaments  */
+#updateContainer {
+    height: 700px;
+    overflow: scroll;
 }
