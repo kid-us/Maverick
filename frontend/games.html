@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <!-- Bootstrap Icon-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- Animate css -->
+    <link rel="stylesheet" href="css/animate.min.css">
+    <title>Maverick Games</title>
+</head>
+
+<body class="bg">
+    <!-- Navbar -->
+    <div id="navbar" class="p-3 px-5">
+        <!-- Large Device navbar -->
+        <div class="d-none d-md-block">
+            <div class="float-start ps-5">
+                <a class="navbar-brand" href="/index.html">
+                    <img src="/img/logolight1.png" alt="logo" width="170px">
+                </a>
+            </div>
+            <div class="float-end pe-5 pt-2 small fw-semibold">
+                <!-- Before Login -->
+                <!-- <a href="/login.html" class="account-link px-4 py-2 small">Register/Login</a> -->
+
+                <!-- After login -->
+                <a href="/tournaments.html" class="cursor me-5">Tournaments</a>
+                <span id="username-link" href="/login.html" class="cursor bi bi-person-fill"> Jon Doe &nbsp;
+                    <span id="icon-link" class="bi bi-caret-down-fill small"></span>
+                </span>
+            </div>
+        </div>
+        <!-- Dashboard dropdown -->
+        <div id="dashboard-links" class="hidden py-3 small pe-3 ps-2">
+            <ul class="fw-semibold">
+                <li><a href="/dashboard.html" class="">Profile</a></li>
+                <li><a href="/tournaments.html" class="">Tournaments</a></li>
+                <li><a href="/games.html" class="">Games</a></li>
+                <hr class="my-2">
+                <li><a href="/setting.html" class="">Setting</a></li>
+                <hr class="my-2">
+                <li><a href="#" class="">Logout</a></li>
+            </ul>
+        </div>
+
+        <!-- Small device navbar -->
+        <div class="d-block d-md-none">
+            <div class="float-start">
+                <a class="navbar-brand" href="#">
+                    <img src="/img/logolight1.png" alt="logo" width="170px">
+                </a>
+            </div>
+
+            <div class="float-end pt-2 small fw-semibold">
+                <p id="menu-btn" class="bi bi-list ms-1"></p>
+            </div>
+        </div>
+
+        <!-- small device menu modal -->
+        <div class="sm-navbar">
+            <div id="menu-page" class="menu animate__animated animate__bounceInLeft hidden">
+                <span id="close-menu" class="nav-item text-danger fs-1 float-end cursor me-5  pe-5">&times;</span>
+                <ul class="pe-5">
+                    <!-- Before Login -->
+
+                    <!-- <a href="/register.html" class="nav-link account-link px-4 py-2 small">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/login.html" class="nav-link account-link px-4 py-2 small">Login</a>
+                    </li> -->
+
+                    <!-- After Login -->
+                    <ul>
+                        <li><a href="/dashboard.html" class="">Profile</a></li>
+                        <li><a href="/tournaments.html" class="">Tournaments</a></li>
+                        <hr class="my-2">
+                        <li><a href="/setting.html" class="">Setting</a></li>
+                        <hr class="my-2">
+                        <li><a href="#" class="">Logout</a></li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Games -->
+    <div class="container my-5 fw-semibold">
+        <div class="text-center m-5 small">
+            <p> Hello <span class="text-warning">Jon Doe</span> Welcome to the Maverick games portal pages here you can
+                browse our
+                Games. Enjoy! </p>
+        </div>
+
+        <!-- Games -->
+        <section class="container my-5 py-5">
+            <p class="fs-5 fw-semibold">Play Games</p>
+            <div class="row justify-content-center mt-5">
+                <div class="popular-games col-lg-4 col-md-6 col-12 mb-5">
+                    <a href="#">
+                        <img src="/img/poker.jpg" class="game-img" alt="">
+                        <div class="game-info text-center">
+                            <h3>Play Now</h3>
+                            <p class="m-0 fw-semibold">
+                                <span class="me-5">Bid: 1,000</span>
+                                <span class="">Price Money: 5000</span>
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="popular-games col-lg-4 col-md-6 col-12 mb-5">
+                    <a href="#">
+                        <img src="/img/black jack.jpg" class="game-img" alt="">
+                        <div class="game-info text-center">
+                            <h3>Play Now</h3>
+                            <p class="m-0 fw-semibold">
+                                <span class="me-5">Bid: 1,000</span>
+                                <span class="">Price Money: 5000</span>
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="popular-games col-lg-4 col-md-6 col-12 mb-5">
+                    <a href="#">
+                        <img src="/img/chess.jpg" class="game-img" alt="">
+                        <div class="game-info text-center">
+                            <h3>Play Now</h3>
+                            <p class="m-0 fw-semibold">
+                                <span class="me-5">Bid: 1,000</span>
+                                <span class="">Price Money: 5000</span>
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="p-3">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-3 col-md-4 col-12 small mt-4 text-center">
+                    <a href="/terms.html" class="text-decoration fw-semibold">Terms</a>
+                    <a href="/about.html" class="text-decoration fw-semibold mx-4">About</a>
+                    <a href="/terms.html" class="text-decoration fw-semibold">Privacy</a>
+                    <a href="/contact.html" class="text-decoration fw-semibold mx-4">Contact</a>
+                </div>
+                <div class="col-lg-4 col-md-4 col-12 text-center mt-3">
+                    <img src="/img/logolight1.png" class="" alt="logo" width="170px">
+                    <p class="small">
+                        <span class="small">&copy; 2023 All right reserved Maverick Habesha</span>
+                    </p>
+                </div>
+                <div class="col-lg-3 col-md-4 col-12 mt-4 text-center">
+                    <a href="#" class="bi bi-tiktok fs-5"></a>
+                    <a href="#" class="bi bi-instagram fs-5 mx-5"></a>
+                    <a href="#" class="bi bi-telegram fs-5"></a>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="/js/script.js"></script>
+
+</body>
+
+</html>
