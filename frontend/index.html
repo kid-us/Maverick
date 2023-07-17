@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <!-- Bootstrap CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
     <!-- Bootstrap Icon-->
@@ -14,10 +14,21 @@
     <link rel="stylesheet" href="css/animate.min.css">
     <!-- Swiper -->
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
-    <title>Document</title>
+    <!-- website Icon -->
+    <link rel="website icon" href="Img/wolf2.jpg">
+    <title>Maverick Habesha</title>
 </head>
 
 <body class="bg">
+
+    <!-- Coming Soon message -->
+    <div id="coming-soon">
+        <script id="src" src="JS/sweetalert2.all.min.js"></script>
+        <!-- <script id="">document.addEventListener('DOMContentLoaded', function (e) {
+
+            })</script> -->
+    </div>
+
     <!-- Top Header -->
     <div class="header bg-gold w-100 px-5 pt-2 pb-1 text-dark fw-semibold">
         <a id="open-header" class="cursor float-start mt-1 bi bi-menu-button-wide-fill text-dark fs-6"></a>
@@ -35,7 +46,7 @@
             <div class="row small fw-semibold">
                 <!-- News and Video -->
                 <div class="col-lg-4 col-6 col-12">
-                    <img src=".img/logolight1.png" class="img-fluid" alt="">
+                    <img src="/img/logolight1.png" class="img-fluid" alt="">
                     <div class="row mt-5">
                         <div class="col-12 mb-4">
                             <div class="border-left  px-3 py-1">
@@ -127,8 +138,8 @@
         <!-- Large Device navbar -->
         <div class="d-none d-md-block">
             <div class="float-start ps-5">
-                <a class="navbar-brand" href="index.html">
-                    <img src="img/logolight1.png" alt="logo" width="170px">
+                <a class="navbar-brand" href="/index.html">
+                    <img src="/img/logolight1.png" alt="logo" width="170px">
                 </a>
             </div>
             <div class="float-end pe-5 pt-2 small fw-semibold">
@@ -137,7 +148,7 @@
 
                 <!-- After login -->
                 <a href="/tournaments.html" class="cursor me-5">Tournaments</a>
-                <a href="/games.html" class="cursor me-5">Games</a>
+                <a class="cursor me-5 games-link">Games</a>
 
                 <span id="username-link" href="/login.html" class="cursor bi bi-person-fill"> Jon Doe &nbsp;
                     <span id="icon-link" class="bi bi-caret-down-fill small"></span>
@@ -147,11 +158,11 @@
         <!-- Dashboard dropdown -->
         <div id="dashboard-links" class="hidden py-3 small pe-3 ps-2">
             <ul class="fw-semibold">
-                <li><a href="dashboard.html" class="">Profile</a></li>
-                <li><a href="tournaments.html" class="">Tournaments</a></li>
-                <li><a href="games.html" class="">Games</a></li>
+                <li><a href="/dashboard.html" class="">Profile</a></li>
+                <li><a href="/tournaments.html" class="">Tournaments</a></li>
+                <li><a class="cursor games-link">Games</a></li>
                 <hr class="my-2">
-                <li><a href="setting.html" class="">Setting</a></li>
+                <li><a href="/setting.html" class="">Setting</a></li>
                 <hr class="my-2">
                 <li><a href="#" class="">Logout</a></li>
             </ul>
@@ -161,7 +172,7 @@
         <div class="d-block d-md-none">
             <div class="float-start">
                 <a class="navbar-brand" href="#">
-                    <img src="img/logolight1.png" alt="logo" width="170px">
+                    <img src="/img/logolight1.png" alt="logo" width="170px">
                 </a>
             </div>
 
@@ -185,13 +196,13 @@
 
                     <!-- After Login -->
                     <ul>
-                        <li><a href="dashboard.html" class="">Profile</a></li>
-                        <li><a href="tournaments.html" class="">Tournaments</a></li>
-                        <li><a href="games.html" class="">Games</a></li>
+                        <li><a href="/dashboard.html">Profile</a></li>
+                        <li><a href="/tournaments.html">Tournaments</a></li>
+                        <li><a href="/games.html" class="cursor games-link">Games</a></li>
                         <hr class="my-2">
-                        <li><a href="setting.html" class="">Setting</a></li>
+                        <li><a href="/setting.html">Setting</a></li>
                         <hr class="my-2">
-                        <li><a href="#" class="">Logout</a></li>
+                        <li><a href="#">Logout</a></li>
                     </ul>
                 </ul>
             </div>
@@ -204,22 +215,11 @@
         <div class="row">
             <!-- Image Col -->
             <div class="col-lg-6 col-md-12 d-none d-md-block">
-                <!-- <div class="screen">
-                    <div class="screen__content">
-                        <img src="/img/iron.png" alt="" class="img">
-                    </div>
-                    <div class="screen__background">
-                        <span class="screen__background__shape screen__background__shape3"></span>
-                        <span class="screen__background__shape screen__background__shape2"></span>
-                        <span class="screen__background__shape screen__background__shape1 d-md-none d-lg-block"></span>
-                    </div>
-                </div> -->
-                <img src="/img/hero.png" alt="" class="img-fluid">
+                <img src="/img/logo.png" alt="" class="img-fluid logo-img">
             </div>
             <!-- Hero title col -->
             <div class="hero-title col-lg-6 px-5 col-md-12 d-none d-md-block">
-                <img src="/img/logolight1.png" alt="logo" width="300px"> <span class="fs-1 bi bi-play-fill"></span>
-                <p class="fs-5 fw-semibold ms-5">PLAY, WIN AND GET PAID</p>
+                <p class="fs-3 fw-semibold ms-5">PLAY, WIN AND GET PAID</p>
                 <div class="ms-5 mt-5 small fw-semibold">
                     <p>Maverick Habesha offers an exhilarating gaming experience with a diverse range of tournaments
                         where players can compete for substantial prize money. With our referral program, players have
@@ -227,8 +227,8 @@
                         games provide endless entertainment and rewards. Join Maverick Habesha today and unleash your
                         gaming prowess for a chance to win big and enjoy exclusive benefits.</p>
                     <p class="mt-5">
-                        <a href="register.html" class="btns small px-5 py-2 me-4">Register to Play</a>
-                        <a href="register.html" class="btns small px-5 py-2 bg-light text-dark"> Tournaments</a>
+                        <a href="/register.html" class="btns small px-5 py-2 me-4">Register to Play</a>
+                        <a href="/register.html" class="btns small px-5 py-2 bg-light text-dark"> Tournaments</a>
                     </p>
                 </div>
             </div>
@@ -238,21 +238,12 @@
         <div class="row d-block d-md-none">
             <!-- Image Col -->
             <div class="col-12">
-                <div class="sm-screen">
-                    <div class="screen__content">
-                        <img src="/img/iron.png" alt="hero" class="img-fluid mt-4">
-                    </div>
-                    <div class="sm-screen__background">
-                        <span class="sm-screen__background__shape sm-screen__background__shape1"></span>
-                        <span class="sm-screen__background__shape sm-screen__background__shape2"></span>
-                    </div>
-                </div>
+                <img src="/img/logo.png" alt="" class="img-fluid sm-logo-img">
             </div>
 
             <!-- Hero title col -->
             <div class="col-12 mt-5">
-                <img src="/img/logolight1.png" alt="logo" width="300px"> <span class="fs-1 bi bi-play-fill"></span>
-                <p class="fs-5 fw-semibold ms-5">PLAY, WIN AND GET PAID</p>
+                <p class="fs-3 fw-semibold ms-5">PLAY, WIN AND GET PAID</p>
                 <div class="mt-5 small fw-semibold text-center">
                     <p>Maverick Habesha offers an exhilarating gaming experience with a diverse range of tournaments
                         where players can compete for substantial prize money. With our referral program, players have
@@ -263,12 +254,12 @@
                 <div class="row mt-5 text-center">
                     <div class="col-lg-6 col-md-6 col-12">
                         <p>
-                            <a href="/register.html" class="btns small px-5 py-2 me-4">Register to Play</a>
+                            <a href="/register.html" class="btns small px-5 py-2 me-lg-4">Register to Play</a>
                         </p>
                     </div>
                     <div class="col-lg-6 col-md-6 col-12 mt-3">
                         <p>
-                            <a href="/register.html" class="btns small px-5 py-2 bg-light text-dark"> Tournaments</a>
+                            <a href="/register.html" class="btns small px-5 py-2 bg-light text-dark">Tournaments</a>
                         </p>
                     </div>
                 </div>
@@ -280,8 +271,8 @@
     <section class="container my-5 py-5">
         <p class="fs-5 fw-semibold">Maverick Games</p>
         <div class="row justify-content-center mt-5">
-            <div class="popular-games col-lg-4 col-md-6 col-12 mb-5">
-                <a href="#">
+            <div class=" popular-games col-lg-4 col-md-6 col-12 mb-5">
+                <a class="games-link cursor">
                     <img src="/img/poker.jpg" class="game-img" alt="">
                     <div class="game-info text-center">
                         <h3 class="my-4 fw-semibold text-center m-0"> Price Money 5,000
@@ -290,8 +281,8 @@
                     </div>
                 </a>
             </div>
-            <div class="popular-games col-lg-4 col-md-6 col-12 mb-5">
-                <a href="#">
+            <div class=" popular-games col-lg-4 col-md-6 col-12 mb-5">
+                <a class="games-link cursor">
                     <img src="/img/black jack.jpg" class="game-img" alt="">
                     <div class="game-info text-center">
                         <h3 class="my-4 fw-semibold text-center m-0"> Price Money 5,000
@@ -300,8 +291,8 @@
                     </div>
                 </a>
             </div>
-            <div class="popular-games col-lg-4 col-md-6 col-12 mb-5">
-                <a href="#">
+            <div class=" popular-games col-lg-4 col-md-6 col-12 mb-5">
+                <a class="games-link cursor">
                     <img src="/img/chess.jpg" class="game-img" alt="">
                     <div class="game-info text-center">
                         <h3 class="my-4 fw-semibold text-center m-0"> Price Money 5,000
@@ -315,20 +306,19 @@
 
     <!-- Maverick Tournaments -->
     <section class="container my-5">
-        <p class="fs-4 fw-semibold">Maverick Tournaments</p>
-        <div class="row justify-content-center">
-            <div class="row justify-content-center mt-5">
-                <div class="tournament-games col-12 mb-5">
-                    <a href="#">
-                        <img src="/img/freefire.jpg" class="rounded tournament-game-img" alt="">
-                        <div class="row small p-lg-5 pt-3">
-                            <div class="col-lg-4 col-md-6 col-6">
-                                <img src="/img/freefire.jpg" alt="" class="rounded" width="100px">
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-6 p-sm-1">
-                                <p class="fs-6 mt-1 fw-semibold">Free Fire</p>
-                                <p class="fs-5 fw-semibold">Survive and win money</p>
-                            </div>
+        <p class="fs-5 fw-semibold">Maverick Tournaments</p>
+        <div class="row justify-content-center mt-5">
+            <div class="tournament-games col-12 my-5">
+                <a href="/tournaments.html">
+                    <img src="/img/freefire.jpg" class="rounded tournament-game-img" alt="">
+                    <div class="row small p-lg-5 pt-3">
+                        <div class="col-lg-4 col-md-6 col-6">
+                            <img src="/img/freefire.jpg" alt="" class="rounded" width="100px">
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-6 p-sm-1">
+                            <p class="fs-6 mt-1 fw-semibold">Free Fire</p>
+                            <p class="fs-5 fw-semibold">Survive and win money</p>
+                        </div>
 
                         <div class="col-lg-4 col-md-6 col-12">
                             <p class="fs-5 fw-semibold">Winner price: 10,000</p>
@@ -338,17 +328,17 @@
                 </a>
             </div>
 
-                <div class="tournament-games col-12 mb-5">
-                    <a href="#">
-                        <img src="/img/survival.jpg" class="rounded tournament-game-img" alt="">
-                        <div class="row small p-lg-5 pt-3">
-                            <div class="col-lg-4 col-md-6 col-6">
-                                <img src="/img/survival.jpg" alt="" class="rounded" width="100px">
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-6">
-                                <p class="fs-6 mt-1 fw-semibold">Rules of Survival</p>
-                                <p class="fs-5 fw-semibold">Survive and win money</p>
-                            </div>
+            <div class="tournament-games col-12 my-5">
+                <a href="/tournaments.html">
+                    <img src="/img/survival.jpg" class="rounded tournament-game-img" alt="">
+                    <div class="row small p-lg-5 pt-3">
+                        <div class="col-lg-4 col-md-6 col-6">
+                            <img src="/img/survival.jpg" alt="" class="rounded" width="100px">
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-6">
+                            <p class="fs-6 mt-1 fw-semibold">Rules of Survival</p>
+                            <p class="fs-5 fw-semibold">Survive and win money</p>
+                        </div>
 
                         <div class="col-lg-4 col-md-6 col-12">
                             <p class="fs-5 fw-semibold">Winner price: 10,000</p>
@@ -358,17 +348,17 @@
                 </a>
             </div>
 
-                <div class="tournament-games col-12 mb-5">
-                    <a href="#">
-                        <img src="/img/rider.jpg" class="rounded tournament-game-img" alt="">
-                        <div class="row small p-lg-5 pt-3">
-                            <div class="col-lg-4 col-md-6 col-6">
-                                <img src="/img/rider.jpg" alt="" class="rounded" width="100px">
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-6">
-                                <p class="fs-6 mt-1 fw-semibold">rider</p>
-                                <p class="fs-5 fw-semibold">Survive and win money</p>
-                            </div>
+            <div class="tournament-games col-12 my-5">
+                <a href="/tournaments.html">
+                    <img src="/img/rider.jpg" class="rounded tournament-game-img" alt="">
+                    <div class="row small p-lg-5 pt-3">
+                        <div class="col-lg-4 col-md-6 col-6">
+                            <img src="/img/rider.jpg" alt="" class="rounded" width="100px">
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-6">
+                            <p class="fs-6 mt-1 fw-semibold">rider</p>
+                            <p class="fs-5 fw-semibold">Survive and win money</p>
+                        </div>
 
                         <div class="col-lg-4 col-md-6 col-12">
                             <p class="fs-5 fw-semibold">Winner price: 10,000</p>
