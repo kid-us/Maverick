@@ -2,12 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Raleway:wght@100;400&family=Russo+One&display=swap');
 
 :root {
-    /* --body-color: #1C1C1C;
-    --main-color: #fff;
-    --shadow: #DAA425;
-    --border: #110e49;
-    --btnBg: #40798C; */
-
     --main-color: #1C1C1C;
     --secondary-color: #262525;
     --box-bg: #DAA425;
@@ -152,7 +146,8 @@ li a:hover {
     top: 23px;
     right: 80px;
     z-index: 2;
-    background-color: #fff;
+    background-color: var(--main-color);
+    color: #fff;
     padding: 10px 40px;
 }
 
@@ -313,4 +308,23 @@ li a:hover {
 #updateContainer {
     height: 700px;
     overflow: scroll;
+}
+
+/* Swiper */
+.gamer-wrapper {
+    margin: 40px 0px;
+    font-size: small;
+    height: auto !important;
+}
+
+.gamer-wrapper:active {
+    cursor: pointer;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--btnBg) !important;
+}
+
+.swiper-pagination-bullet {
+    border: 3px solid var(--btnBg);
 }
