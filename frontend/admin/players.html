@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <title>Dashboard</title>
+</head>
+
+<body>
+
+    <div class="row container-fluid">
+        <!-- Large device Sidebar -->
+        <div class="col-lg-2 col-md-2 col-12  px-4 sidebar fw-semibold d-none d-lg-block">
+            <p class="my-5">
+                <a href="/admin/index.html">
+                    <img src="/img/logo.png" alt="logo" class="img-fluid">
+                </a>
+            </p>
+
+            <p class="small text-center">
+                <span class="bi bi-person-fill fs-4"></span>
+                Jon Doe
+            </p>
+
+            <div class="pt-5 ms-4">
+                <p class="mb-4 pt-3">
+                    <a href="/admin/index.html" class="text-light">
+                        <span class="text-warning fs-5 bi bi-speedometer2 me-1"></span>
+                        Dashboard</a>
+                </p>
+                <p class="mb-4 pt-3">
+                    <a href="/admin/profile.html" class="text-light"> <span
+                            class="text-warning fs-5 bi bi-person-fill me-1"></span>
+                        Profile</a>
+                </p>
+
+                <p class="mb-4 pt-3">
+                    <a href="/admin/admins.html" class="text-light">
+                        <span class="text-warning fs-5 bi bi-people-fill me-1"></span>
+                        Admins
+                    </a>
+                </p>
+
+                <p class="mb-4 pt-3">
+                    <a href="/admin/tournament.html" class="text-light"> <span
+                            class="text-warning fs-5 bi bi-controller me-1"></span>
+                        Tournaments</a>
+                </p>
+
+                <p class="mb-4 pt-3">
+                    <a href="/admin/players.html" class="text-light"> <span
+                            class="text-warning fs-5 bi bi-music-player-fill me-1"></span>
+                        Players</a>
+                </p>
+
+                <p class="pt-3">
+                    <a href="/admin/logout" class="text-light"> <span
+                            class="text-warning fs-5 bi bi-box-arrow-right me-1"></span>
+                        Logout
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        <!-- Medium device sidebar -->
+        <div class="col-1 d-none d-md-block d-lg-none sidebar" style="width: 100px;">
+            <p class="my-5">
+                <a href="/admin/index.html">
+                    <img src="/img/logo.png" alt="logo" class="img-fluid">
+                </a>
+            </p>
+
+            <p class="bi bi-person-fill small text-center fw-semibold"> Jon Doe</p>
+
+            <div class="ms-2 pt-5 ps-3">
+                <p class="mb-4 pt-3">
+                    <a href="/admin/index.html" title="Dashboard"> <span
+                            class="text-warning fs-5 bi bi-speedometer2 me-1"></span>
+                    </a>
+                </p>
+                <p class="mb-4 pt-3">
+                    <a href="/admin/profile.html" title="Profile"> <span
+                            class="text-warning fs-5 bi bi-person-fill me-1"></span>
+                    </a>
+                </p>
+
+                <p class="mb-4 pt-3">
+                    <a href="/admin/admins.html" title="Admins"> <span
+                            class="text-warning fs-5 bi bi-people-fill me-1"></span>
+                    </a>
+                </p>
+
+                <p class="mb-4 pt-3">
+                    <a href="/admin/tournament.html" title="Tournament"> <span
+                            class="text-warning fs-5 bi bi-controller me-1"></span>
+                    </a>
+                </p>
+
+                <p class="mb-4 pt-3">
+                    <a href="/admin/players.html" title="Players"> <span
+                            class="text-warning fs-5 bi bi-bi bi-music-player-fill me-1"></span>
+                    </a>
+                </p>
+
+                <p class="pt-3">
+                    <a href="/admin/logout" title="Logout"> <span
+                            class="text-warning fs-5 bi bi-box-arrow-right me-1"></span>
+                    </a>
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Small device sidebar -->
+        <div class="d-block d-md-none pt-3 border-bottom">
+            <li class="mx-2 mb-2 ps-4 mt-1 text-light float-start">
+                <a href="/admin/index.html">
+                    <img src="/img/logo.png" alt="logo" class="img-fluid" width="150px">
+                </a>
+            </li>
+            <h1 class="mx-2 mb-2 float-end ">
+                <a id="sm-menu-bar" class="bi bi-list cursor"></a>
+            </h1>
+
+            <!-- overlay -->
+            <div id="sidebar-overlay" class="hidden"></div>
+
+            <!-- Small Device menus -->
+            <div id="small-sidebar" class="sm-sidebar shadow-lg py-5 small hidden">
+                <button id="sidebar-close" class="close-btn text-end float-end fs-1 me-2">&times;</button>
+
+                <p class="mb-5">
+                    <a href="/admin/index.html" class="text-light">
+                        <img src="/img/logo.png" alt="" width="180px">
+                    </a>
+                </p>
+
+                <p class="fw-semibold text-center pb-5">
+                    <span class="bi bi-person-fill fs-5"></span>
+                    Jon Doe
+                </p>
+
+                <p class="mb-4 fw-semibold pt-2 ps-5">
+                    <a href="/admin/index.html" class="text-light"> <span
+                            class="text-warning fs-5 bi bi-speedometer2 me-1"></span>
+                        Dashboard</a>
+                </p>
+
+                <p class="mb-4 fw-semibold pt-2 ps-5">
+                    <a href="/admin/profile.html" class="text-light"> <span
+                            class="text-warning fs-5 bi bi-person-fill me-1"></span>
+                        Profile</a>
+                </p>
+
+                <p class="mb-4 fw-semibold pt-2 ps-5">
+                    <a href="/admin/admins.html" class="text-light"> <span
+                            class="text-warning fs-5 bi bi-people-fill me-1"></span>
+                        Admins</a>
+                </p>
+
+                <p class="mb-4 fw-semibold pt-2 ps-5">
+                    <a href="/admin/tournament.html" class="text-light"> <span
+                            class="text-warning fs-5 bi bi-controller me-1"></span>
+                        Tournaments</a>
+                </p>
+
+                <p class="mb-4 fw-semibold pt-2 ps-5">
+                    <a href="/admin/players.html" class="text-light"> <span
+                            class="text-warning fs-5 bi bi-music-player-fill me-1"></span>
+                        Players</a>
+                </p>
+
+                <p class="mb-4 fw-semibold pt-2 ps-5">
+                    <a href="/admin/logout" class="text-light">
+                        <span class="text-warning fs-5 bi bi-box-arrow-right me-1"></span>
+                        Logout
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        <!-- Main Contents -->
+        <div class="col-12 ms-3">
+            <div class="contents mt-5">
+                <p class="fs-5 fw-semibold border-start border-warning border-5 mb-4"> &nbsp; &nbsp; Players</p>
+
+                <!-- Navbar -->
+                <div class="d-none d-md-block">
+                    <div class="navbar border-bottom rounded">
+                        <form action="#" method="#" class="me-5">
+                            <!-- <select type="text" name="category" class="me-3 py-1 px-4">
+                                <option value="tenant">Tenants</option>
+                                <option value="agents">Agents</option>
+                                <option value="property">Property</option>
+                                <option value="manager">Manager</option>
+                            </select> -->
+                            <input type="text" name="keyword" class="py-1" required>
+                            <button class="btns py-1 bi small bi-search ms-2"></button>
+                        </form>
+                        <a id="notification-link" class="cursor bi bi-envelope-fill position-relative me-5 text-light">
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger ms-2">
+                                2
+                            </span>
+                        </a>
+
+                        <a href="/admin/profile.html" class="d-none d-md-block text-light">
+                            <span class="small bi bi-person-fill">&nbsp; &nbsp; Jon Doe</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Notification Modal -->
+                <div id="notification-container"
+                    class="notification-modal px-5 py-4 rounded shadow-lg small fw-semibold hidden">
+                    <div class="my-4 border-bottom">
+                        <p class="text-info border-start border-warning border-5 mb-4"> &nbsp; Withdraw Requested</p>
+                        <p>Player : Jon Doe</p>
+                        <p>Current Balance: 2000 ETB</p>
+                        <p>Telegram Account: <a href="#" class="text-warning">@username</a></p>
+                        <form action="#" method="" class="text-end">
+                            <input type="text" name="Required_Thing" hidden>
+                            <button class="btn btn-danger mb-4"> &times</button>
+                        </form>
+                    </div>
+
+                    <div class="my-4 border-bottom">
+                        <p class="text-info border-start border-warning border-5 mb-4"> &nbsp; Withdraw Requested</p>
+                        <p>Player : Jon Doe</p>
+                        <p>Current Balance: 2000 ETB</p>
+                        <p>Telegram Account: <a href="#" class="text-warning">@username</a></p>
+                        <form action="#" method="" class="text-end">
+                            <input type="text" name="Required_Thing" hidden>
+                            <button class="btn btn-danger mb-4"> &times</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Player Information -->
+                <div class="mt-5">
+                    <div class="py-3">
+                        <input type="search" id="searchInput"
+                            class="form-control-plaintext border border-warning rounded px-4 w-50 d-none d-md-block"
+                            placeholder="Enter keywords">
+
+                        <input type="search" id="searchSmInput"
+                            class="form-control-plaintext border border-warning rounded px-4 w-100 d-block d-md-none"
+                            placeholder="Enter keywords">
+                    </div>
+
+                    <div class="table-container table-responsive px-5 rounded shadow-lg bg2 mb-5 mt-3">
+                        <table class="table table-dark custom-table caption-top mt-4 small">
+                            <caption class="fw-semibold small">List of Players</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Id</th>
+                                    <th scope="col">Username</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Phone</th>
+                                    <th scope="col" class="small">Status</th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <th>1232</th>
+                                    <td>Mark</td>
+                                    <td>mark@gmail.com</td>
+                                    <td>0987654321</td>
+                                    <td class="text-primary fw-semibold small">Active</td>
+                                    <td>
+                                        <form action="#" method="#">
+                                            <input type="email" name="email" hidden>
+                                            <button class="btn btn-secondary py-1">Block</button>
+                                        </form>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <th>1442</th>
+                                    <td>Jon</td>
+                                    <td>jon@gmail.com</td>
+                                    <td>0987654321</td>
+                                    <td class="text-primary fw-semibold small">Active</td>
+                                    <td>
+                                        <form action="#" method="#">
+                                            <input type="email" name="email" hidden>
+                                            <button class="btn btn-secondary py-1">Block</button>
+                                        </form>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <th>7678</th>
+                                    <td>Matt</td>
+                                    <td>matt@gmail.com</td>
+                                    <td>0987654321</td>
+                                    <td class="text-primary fw-semibold">Active</td>
+                                    <td>
+                                        <form action="#" method="#">
+                                            <input type="email" name="email" hidden>
+                                            <button class="btn btn-secondary py-1">Block</button>
+                                        </form>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <th>7843</th>
+                                    <td>Lorem</td>
+                                    <td>lorem@gmail.com</td>
+                                    <td>0987654321</td>
+                                    <td class="text-secondary fw-semibold">Blocked</td>
+                                    <td>
+                                        <form action="#" method="#">
+                                            <input type="email" name="email" hidden>
+                                            <button class="btn btn-primary py-1">Active</button>
+                                        </form>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">5</th>
+                                    <th>3643</th>
+                                    <td>Lorem</td>
+                                    <td>lorem@gmail.com</td>
+                                    <td>0987654321</td>
+                                    <td class="text-secondary fw-semibold">Blocked</td>
+                                    <td>
+                                        <form action="#" method="#">
+                                            <input type="email" name="email" hidden>
+                                            <button class="btn btn-primary py-1">Active</button>
+                                        </form>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">6</th>
+                                    <th>1111</th>
+                                    <td>Lorem</td>
+                                    <td>lorem@gmail.com</td>
+                                    <td>0987654321</td>
+                                    <td class="text-secondary fw-semibold">Blocked</td>
+                                    <td>
+                                        <form action="#" method="#">
+                                            <input type="email" name="email" hidden>
+                                            <button class="btn btn-primary py-1">Active</button>
+                                        </form>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">7</th>
+                                    <th>5641</th>
+                                    <td>Matt</td>
+                                    <td>matt@gmail.com</td>
+                                    <td>0987654321</td>
+                                    <td class="text-primary fw-semibold">Active</td>
+                                    <td>
+                                        <form action="#" method="#">
+                                            <input type="email" name="email" hidden>
+                                            <button class="btn btn-secondary py-1">Block</button>
+                                        </form>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">8</th>
+                                    <th>9898</th>
+                                    <td>Matt</td>
+                                    <td>matt@gmail.com</td>
+                                    <td>0987654321</td>
+                                    <td class="text-primary fw-semibold">Active</td>
+                                    <td>
+                                        <form action="#" method="#">
+                                            <input type="email" name="email" hidden>
+                                            <button class="btn btn-secondary py-1">Block</button>
+                                        </form>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">9</th>
+                                    <th>9891</th>
+                                    <td>Matt</td>
+                                    <td>matt@gmail.com</td>
+                                    <td>0987654321</td>
+                                    <td class="text-primary fw-semibold">Active</td>
+                                    <td>
+                                        <form action="#" method="#">
+                                            <input type="email" name="email" hidden>
+                                            <button class="btn btn-secondary py-1">Block</button>
+                                        </form>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        <!-- Pagination -->
+                        <nav>
+                            <ul class="pagination pagination-sm">
+                                <li class="page-item disabled">
+                                    <a class="page-link">Previous</a>
+                                </li>
+                                <li class="page-item"><a class="page-link bg-warning text-light" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">Next</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/admin.js"></script>
+
+</body>
+
+</html>
