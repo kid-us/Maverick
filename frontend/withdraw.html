@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <!-- Bootstrap CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
     <!-- Bootstrap Icon-->
@@ -16,23 +16,24 @@
 </head>
 
 <body class="bg">
+
     <!-- Navbar -->
     <div id="navbar" class="p-3 px-5">
         <!-- Large Device navbar -->
         <div class="d-none d-md-block">
             <div class="float-start ps-5">
-                <a class="navbar-brand" href="/index.html">
-                    <img src="/img/logolight1.png" alt="logo" width="170px">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/logolight1.png" alt="logo" width="170px">
                 </a>
             </div>
             <div class="float-end pe-5 pt-2 small fw-semibold">
+
                 <!-- Before Login -->
-                <!-- <a href="/login.html" class="account-link px-4 py-2 small">Register/Login</a> -->
+                <!-- <a href="login.html" class="account-link px-4 py-2 small">Register/Login</a> -->
 
                 <!-- After login -->
-                <a href="/tournaments.html" class="me-5">Tournaments</a>
-                <!-- <a href="/games.html" class="me-5">Games</a> -->
-                <span id="username-link" href="/login.html" class="cursor bi bi-person-fill"> Jon Doe &nbsp;
+                <a href="tournaments.html" class="me-5">Tournaments</a>
+                <span id="username-link" href="login.html" class="cursor bi bi-person-fill"> Jon Doe &nbsp;
                     <span id="icon-link" class="bi bi-caret-down-fill small"></span>
                 </span>
             </div>
@@ -40,11 +41,9 @@
         <!-- Dashboard dropdown -->
         <div id="dashboard-links" class="hidden py-3 small pe-3 ps-2">
             <ul>
-                <li><a href="/dashboard.html">Profile</a></li>
-                <li><a href="/tournaments.html">Tournaments</a></li>
-                <!-- <li><a href="/games.html">Games</a></li> -->
+                <li><a href="dashboard.html">Profile</a></li>
                 <hr class="my-2">
-                <li><a href="/setting.html">Setting</a></li>
+                <li><a href="setting.html">Setting</a></li>
                 <hr class="my-2">
                 <li><a href="#">Logout</a></li>
             </ul>
@@ -53,8 +52,8 @@
         <!-- Small device navbar -->
         <div class="d-block d-md-none">
             <div class="float-start">
-                <a class="navbar-brand" href="#">
-                    <img src="/img/logolight1.png" alt="logo" width="170px">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/logolight1.png" alt="logo" width="170px">
                 </a>
             </div>
 
@@ -64,25 +63,27 @@
         </div>
 
         <!-- small device menu modal -->
-        <div class="sm-navbar">
-            <div id="menu-page" class="menu animate__animated animate__bounceInLeft hidden">
+        <div class="sm-navbar mt-3">
+            <div id="menu-page" class="menu animate__animated animate__bounceInLeft mt-5 hidden">
                 <span id="close-menu" class="nav-item text-danger fs-1 float-end cursor me-5  pe-5">&times;</span>
                 <ul class="pe-5">
+
                     <!-- Before Login -->
 
-                    <!-- <a href="/register.html" class="nav-link account-link px-4 py-2 small">Register</a>
+                    <!-- <p class="pt-5 pb-3">Account</p>
+                    <!-- <a href="register.html" class="nav-link account-link px-4 py-2 small">Register</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/login.html" class="nav-link account-link px-4 py-2 small">Login</a>
+                        <a href="login.html" class="nav-link account-link px-4 py-2 small">Login</a>
                     </li> -->
 
                     <!-- After Login -->
                     <ul>
-                        <li><a href="/dashboard.html">Profile</a></li>
-                        <li><a href="/tournaments.html">Tournaments</a></li>
-                        <!-- <li><a href="/games.html">Games</a></li> -->
+                        <p class="pt-5 pb-3 fw-semibold bi bi-person-fill fs-4"> Jon Doe</p>
+                        <li><a href="dashboard.html">Profile</a></li>
+                        <li><a href="tournaments.html">Tournaments</a></li>
                         <hr class="my-2">
-                        <li><a href="/setting.html">Setting</a></li>
+                        <li><a href="setting.html">Setting</a></li>
                         <hr class="my-2">
                         <li><a href="#">Logout</a></li>
                     </ul>
@@ -99,24 +100,35 @@
             <p class="mt-5">Balance: <span id="balance" class="text-warning fs-4">0</span> ETB</p>
 
             <p class="mt-5">
-                <a href="/dashboard.html" class="small">OVERVIEW</a>
-                <a href="/power.html" class="mx-3 small"> POWER PARTNER</a>
-                <a href="/withdraw.html" class="border-bottom border-warning border-2">WITHDRAW</a>
+                <a href="dashboard.html" class="small">OVERVIEW</a>
+                <a href="power.html" class="mx-3 small"> POWER PARTNER</a>
+                <a href="withdraw.html" class="border-bottom border-warning border-2">WITHDRAW</a>
             </p>
         </div>
 
-        <div class="row justify-content-center">
-            <div class="col-lg-6 col-md-6 col-12 p-5 small">
-                <div class="border-end border-warning bordr-5">
-                    <p>
-                        Welcome to the Cash Out section, where you can conveniently withdraw your hard-earned earnings.
+        <div class="row justify-content-center m-lg-5 my-5 mx-2">
+            <!-- <div class="col-lg-6 col-md-6 col-12 p-5 small"> -->
+            <!-- <div class="border-end border-warning bordr-5"> -->
+            <p>
+
+                <!-- WITHDRAW YOUR MONEY ON MAVERICK HABESHA! -->
+
+                To withdraw your cash prize on Maverick Habesha, follow these easy steps: If your balance
+                exceeds 00 ETB, visit the Withdrawal Bot on Telegram. Provide your website username, Telegram
+                account, and choose your preferred payment gateway, either Telle Birr or CBE Birr. Once you've
+                filled out the information, submit it to the bot. Your full prize money will be sent to you in a
+                short period of time.
+
+                <!-- Welcome to the Cash Out section, where you can conveniently withdraw your hard-earned earnings.
                         This
                         is the place where players with a positive balance can securely cash out their funds. We've made
                         the
-                        process simple and hassle-free, ensuring that you can access your winnings quickly.
-                    </p>
+                        process simple and hassle-free, ensuring that you can access your winnings quickly. -->
+            </p>
 
-                    <p>To initiate a withdrawal, click on the "Cash Out" button. If you have a
+            <p class="my-4"><a href="#" class="btns">Go to Telegram Bot</a></p>
+
+            <!-- <p>To initiate a withdrawal, click on the "Cash Out" button. If you have a
                         balance greater than zero,
                         you'll be directed to a straightforward form where you can provide your Telegram account
                         details. We
@@ -139,10 +151,10 @@
                     <p>
                         Please note that players with a balance of zero won't be able to access or click the "Cash Out"
                         button. Ensure your account has a positive balance to enjoy the benefits of easy and secure
-                        withdrawals.</p>
-                </div>
-            </div>
-            <div class="col-lg-6 col-12 py-5">
+                        withdrawals.</p> -->
+            <!-- </div> -->
+            <!-- </div> -->
+            <!-- <div class="col-lg-6 col-12 py-5">
                 <form action="#" class="bg2 p-5">
                     <label for="account"> Telegram Account Phone No </label>
                     <input required type="tel" name="phone" class="form-control mt-4 mb-4">
@@ -151,7 +163,7 @@
                     <button id="withdraw-btn" class="btns px-5 small">Cash Out</button>
                     <p id="error-msg" class="text-danger small mt-4 hidden">There is no money to withdraw!</p>
                 </form>
-            </div>
+            </div> -->
         </div>
     </div>
 
@@ -160,13 +172,13 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-3 col-md-4 col-12 small mt-4 text-center">
-                    <a href="/terms.html" class="text-decoration fw-semibold">Terms</a>
-                    <a href="/about.html" class="text-decoration fw-semibold mx-4">About</a>
-                    <a href="/terms.html" class="text-decoration fw-semibold">Privacy</a>
-                    <a href="/contact.html" class="text-decoration fw-semibold mx-4">Contact</a>
+                    <a href="terms.html" class="text-decoration fw-semibold">Terms</a>
+                    <a href="about.html" class="text-decoration fw-semibold mx-4">About</a>
+                    <a href="terms.html" class="text-decoration fw-semibold">Privacy</a>
+                    <a href="contact.html" class="text-decoration fw-semibold mx-4">Contact</a>
                 </div>
                 <div class="col-lg-4 col-md-4 col-12 text-center mt-3">
-                    <img src="/img/logolight1.png" class="" alt="logo" width="170px">
+                    <img src="img/logolight1.png" class="" alt="logo" width="170px">
                     <p class="small">
                         <span class="small">&copy; 2023 All right reserved Maverick Habesha</span>
                     </p>
@@ -181,7 +193,7 @@
 
     </footer>
 
-    <script src="/js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
