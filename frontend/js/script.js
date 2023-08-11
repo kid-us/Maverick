@@ -64,20 +64,6 @@ usernameLink.addEventListener("click", () => {
     }
 });
 
-
-// Profile
-const balance = document.getElementById("balance");
-if (balance) {
-    const withdrawBtn = document.getElementById("withdraw-btn");
-    const errorMessage = document.getElementById("error-msg");
-    if (balance.textContent < 1) {
-        withdrawBtn.addEventListener("mouseenter", () => {
-            withdrawBtn.setAttribute("disabled", true)
-            errorMessage.classList.remove("hidden");
-        })
-    }
-}
-
 // Coming Soon Message
 const gamesContainer = document.querySelectorAll(".games-link");
 gamesContainer.forEach((game) => {
@@ -94,33 +80,3 @@ gamesContainer.forEach((game) => {
         })
     });
 })
-
-// Swiper
-var swiper;
-swiper = new Swiper(".swiper", {
-    breakpoints: {
-        "@0.00": {
-            slidesPerView: 1,
-            spaceBetween: 10,
-        },
-        "@0.75": {
-            slidesPerView: 1,
-            spaceBetween: 10,
-        },
-        "@1.00": {
-            slidesPerView: 2,
-            spaceBetween: 10,
-        },
-        "@1.50": {
-            slidesPerView: 3,
-            spaceBetween: 15,
-        },
-    },
-
-
-    pagination: {
-        el: ".swiper-pagination",
-        type: "bullets",
-        clickable: true,
-    },
-});
