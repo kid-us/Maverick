@@ -98,7 +98,7 @@
         <div class="mt-5 ms-5 dash-titles">
             <p class="text-warning">Jon Doe</p>
             <span class="p-0">Member Since June 2023</span>
-            <p class="mt-5">Balance: <span id="balance" class="text-warning fs-4">0</span> ETB</p>
+            <p class="mt-5">Balance: <span id="balance" class="text-warning fs-4">100</span> ETB</p>
 
             <p class="mt-5">
                 <a href="dashboard.html" class="small">OVERVIEW</a>
@@ -108,63 +108,45 @@
         </div>
 
         <div class="row justify-content-center m-lg-5 my-5 mx-2">
-            <!-- <div class="col-lg-6 col-md-6 col-12 p-5 small"> -->
-            <!-- <div class="border-end border-warning bordr-5"> -->
             <p>
-
-                <!-- WITHDRAW YOUR MONEY ON MAVERICK HABESHA! -->
-
                 To withdraw your cash prize on Maverick Habesha, follow these easy steps: If your balance
                 exceeds 00 ETB, visit the Withdrawal Bot on Telegram. Provide your website username, Telegram
                 account, and choose your preferred payment gateway, either Telle Birr or CBE Birr. Once you've
                 filled out the information, submit it to the bot. Your full prize money will be sent to you in a
                 short period of time.
-
-                <!-- Welcome to the Cash Out section, where you can conveniently withdraw your hard-earned earnings.
-                        This
-                        is the place where players with a positive balance can securely cash out their funds. We've made
-                        the
-                        process simple and hassle-free, ensuring that you can access your winnings quickly. -->
             </p>
 
-            <p class="my-4"><a href="#" class="btns">Go to Telegram Bot</a></p>
+            <!-- <p class="my-4"><a href="#" class="btns">Go to Telegram Bot</a></p> -->
 
-            <!-- <p>To initiate a withdrawal, click on the "Cash Out" button. If you have a
-                        balance greater than zero,
-                        you'll be directed to a straightforward form where you can provide your Telegram account
-                        details. We
-                        will send you a unique verification code through Telegram to ensure the security of your
-                        withdrawal
-                        request.</p>
-                    <p> Once you receive the verification code, simply enter it on our website to
-                        confirm your identity.
-                        Then, select your preferred payment system or bank account where you'd like to receive your
-                        funds.
-                        Rest assured, our payment team will process your withdrawal promptly.</p>
-                    <p>
-                        We understand the importance of keeping you informed throughout the process. Therefore, we'll
-                        notify
-                        you via your Telegram account once the payment has been sent. Your satisfaction and trust are
-                        our
-                        top priorities, and we strive to provide a seamless and reliable withdrawal experience.
-                    </p>
+            <form id="withdraw-form" action="#" class="bg2 m-5 p-5">
+                <label for="account"> What do you prefer to withdraw CBE or Tele Birr? </label>
+                <select name="withdraw-type" id="withdraw-type" class="form-select my-4 bg-warning">
+                    <option value="" hidden selected>Select Your Prefer</option>
+                    <option value="cbe">CBE</option>
+                    <option value="tele">Tele Birr</option>
+                </select>
 
-                    <p>
-                        Please note that players with a balance of zero won't be able to access or click the "Cash Out"
-                        button. Ensure your account has a positive balance to enjoy the benefits of easy and secure
-                        withdrawals.</p> -->
-            <!-- </div> -->
-            <!-- </div> -->
-            <!-- <div class="col-lg-6 col-12 py-5">
-                <form action="#" class="bg2 p-5">
-                    <label for="account"> Telegram Account Phone No </label>
-                    <input required type="tel" name="phone" class="form-control mt-4 mb-4">
-                    <label for="password"> Password </label>
-                    <input required type="text" class="form-control mt-4 mb-4">
-                    <button id="withdraw-btn" class="btns px-5 small">Cash Out</button>
-                    <p id="error-msg" class="text-danger small mt-4 hidden">There is no money to withdraw!</p>
-                </form>
-            </div> -->
+                <div id="phone" class="hidden">
+                    <label for="password"> Phone Number </label>
+                    <input required type="tel" name="phone" maxlength="10" placeholder="0993..."
+                        class="form-control my-4">
+                </div>
+
+                <div id="account-number" class="hidden">
+                    <label for="password"> CBE Account Number </label>
+                    <input required type="tel" name="bank-account" maxlength="13" placeholder="1000..."
+                        class="form-control my-4">
+                </div>
+
+                <label for="password"> Password </label>
+                <input required type="password" name="password" class="form-control my-4">
+
+                <button id="withdraw-btn" class="btns px-5 small">Proceed</button>
+            </form>
+            <!-- When the balance is 0 -->
+            <p id="error-msg" class="alert alert-danger text-danger small mt-4 text-center fs-3">There is no money to
+                withdraw!</p>
+
         </div>
     </div>
 
@@ -195,6 +177,7 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="js/withdraw.js"></script>
 </body>
 
 </html>
