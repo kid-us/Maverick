@@ -1,192 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
     <!-- Bootstrap CDN -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    />
     <!-- Bootstrap Icon-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
     <!-- Animate css -->
-    <link rel="stylesheet" href="css/animate.min.css">
-    <link rel="website icon" href="img/cubes.png">
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <link rel="website icon" href="img/cubes.png" />
     <title>About Maverick Habesha</title>
-</head>
+  </head>
 
-<body class="bg">
+  <body class="bg">
     <!-- Coming Soon message -->
     <div id="coming-soon">
-        <script id="src" src="JS/sweetalert2.all.min.js"></script>
+      <script id="src" src="JS/sweetalert2.all.min.js"></script>
     </div>
 
     <!-- Navbar -->
     <div id="navbar" class="p-3 px-5">
-        <!-- Large Device navbar -->
-        <div class="d-none d-md-block">
-            <div class="float-start ps-5">
-                <a class="navbar-brand" href="index.html">
-                    <img src="img/logolight1.png" alt="logo" width="170px">
-                </a>
-            </div>
-            <div class="float-end pe-5 pt-2 small fw-semibold">
-                <!-- Before Login -->
-                <!-- <a href="login.html" class="account-link px-4 py-2 small">Register/Login</a> -->
-
-                <!-- After login -->
-                <a href="tournaments.html" class="cursor me-5">Tournaments</a>
-                <a class="cursor me-5 games-link">Games</a>
-
-                <span id="username-link" href="login.html" class="cursor bi bi-person-fill"> Jon Doe &nbsp;
-                    <span id="icon-link" class="bi bi-caret-down-fill small"></span>
-                </span>
-            </div>
+      <!-- Large Device navbar -->
+      <div class="d-none d-md-block">
+        <div class="float-start ps-5">
+          <a class="navbar-brand" href="index.html">
+            <img src="img/logolight1.png" alt="logo" width="170px" />
+          </a>
         </div>
-        <!-- Dashboard dropdown -->
-        <div id="dashboard-links" class="hidden py-3 small pe-3 ps-2">
-            <ul class="fw-semibold">
-                <li><a href="dashboard.html">Profile</a></li>
-                <hr class="my-2">
-                <li><a href="setting.html">Setting</a></li>
-                <hr class="my-2">
-                <li><a href="#">Logout</a></li>
-            </ul>
+        <div class="float-end pe-5 pt-2 small fw-semibold">
+          <!-- Before Login -->
+          <!-- <a href="login.html" class="account-link px-4 py-2 small">Register/Login</a> -->
+
+          <!-- After login -->
+          <a href="tournaments.html" class="cursor me-5">Tournaments</a>
+          <a class="cursor me-5 games-link">Games</a>
+
+          <span
+            id="username-link"
+            href="login.html"
+            class="cursor bi bi-person-fill"
+          >
+            Jon Doe &nbsp;
+            <span id="icon-link" class="bi bi-caret-down-fill small"></span>
+          </span>
+        </div>
+      </div>
+      <!-- Dashboard dropdown -->
+      <div id="dashboard-links" class="hidden py-3 small pe-3 ps-2">
+        <ul class="fw-semibold">
+          <li><a href="dashboard.html">Profile</a></li>
+          <hr class="my-2" />
+          <li><a href="setting.html">Setting</a></li>
+          <hr class="my-2" />
+          <li><a href="#">Logout</a></li>
+        </ul>
+      </div>
+
+      <!-- Small device navbar -->
+      <div class="d-block d-md-none">
+        <div class="float-start">
+          <a class="navbar-brand" href="index.html">
+            <img src="img/logolight1.png" alt="logo" width="170px" />
+          </a>
         </div>
 
-        <!-- Small device navbar -->
-        <div class="d-block d-md-none">
-            <div class="float-start">
-                <a class="navbar-brand" href="index.html">
-                    <img src="img/logolight1.png" alt="logo" width="170px">
-                </a>
-            </div>
-
-            <div class="float-end pt-2 small fw-semibold">
-                <p id="menu-btn" class="bi bi-list ms-1"></p>
-            </div>
+        <div class="float-end pt-2 small fw-semibold">
+          <p id="menu-btn" class="bi bi-list ms-1"></p>
         </div>
+      </div>
 
-        <!-- small device menu modal -->
-        <div class="sm-navbar mt-3">
-            <div id="menu-page" class="menu animate__animated animate__bounceInLeft mt-5 hidden">
-                <span id="close-menu" class="nav-item text-danger fs-1 float-end cursor me-5 pe-5">&times;</span>
-                <ul class="pe-5">
-                    <!-- Before Login -->
+      <!-- small device menu modal -->
+      <div class="sm-navbar mt-3">
+        <div
+          id="menu-page"
+          class="menu animate__animated animate__bounceInLeft mt-5 hidden"
+        >
+          <span
+            id="close-menu"
+            class="nav-item text-danger fs-1 float-end cursor me-5 pe-5"
+            >&times;</span
+          >
+          <ul class="pe-5">
+            <!-- Before Login -->
 
-                    <!-- <p class="pt-5 pb-3">Account</p>
+            <!-- <p class="pt-5 pb-3">Account</p>
                     <a href="register.html" class="nav-link account-link px-5 py-2 small">Register</a>
                     </li>
                     <li class="nav-item">
                         <a href="login.html" class="nav-link account-link px-5 py-2 small">Login</a>
                     </li> -->
 
-                    <!-- After Login -->
-                    <ul>
-                        <p class="pt-5 pb-3 fw-semibold bi bi-person-fill fs-4"> Jon Doe</p>
-                        <li><a href="dashboard.html">Profile</a></li>
-                        <li><a href="tournaments.html">Tournaments</a></li>
-                        <li><a href="#" class="cursor games-link">Games</a></li>
-                        <hr class="my-2">
-                        <li><a href="setting.html">Setting</a></li>
-                        <hr class="my-2">
-                        <li><a href="#">Logout</a></li>
-                    </ul>
-                </ul>
-            </div>
+            <!-- After Login -->
+            <ul>
+              <p class="pt-5 pb-3 fw-semibold bi bi-person-fill fs-4">
+                Jon Doe
+              </p>
+              <li><a href="dashboard.html">Profile</a></li>
+              <li><a href="tournaments.html">Tournaments</a></li>
+              <li><a href="#" class="cursor games-link">Games</a></li>
+              <hr class="my-2" />
+              <li><a href="setting.html">Setting</a></li>
+              <hr class="my-2" />
+              <li><a href="#">Logout</a></li>
+            </ul>
+          </ul>
         </div>
+      </div>
     </div>
 
     <div class="container my-5 px-4">
-        <p class="display-6 gradient-text fw-semibold text-center"> Welcome to MAVERICK HABESHA</p>
+      <p class="display-6 gradient-text fw-semibold text-center">
+        Welcome to MAVERICK HABESHA
+      </p>
 
-        <p class="fs-4 fw-semibold mt-5">What is Maverick Habesha?</p>
-        <p>Maverick Habesha is a premier gaming platform that offers a thrilling experience for
-            both tournament enthusiasts and solo players alike. As a gaming site, we provide a diverse range of
-            tournaments and solo games where players can showcase their skills and compete for high-stake rewards. With
-            a strong emphasis on competitiveness and excellence, we reward winners and top performers with generous
-            prize money rewards. Whether you're a seasoned player or a passionate newcomer, Maverick Habesha offers an
-            exciting opportunity to test your abilities, challenge opponents, and seize the chance to win substantial
-            cash prizes.</p>
+      <p class="fs-4 fw-semibold mt-5">What is Maverick Habesha?</p>
+      <p>
+        Maverick Habesha is a premier gaming platform that offers a thrilling
+        experience for both tournament enthusiasts and solo players alike. As a
+        gaming site, we provide a diverse range of tournaments and solo games
+        where players can showcase their skills and compete for high-stake
+        rewards. With a strong emphasis on competitiveness and excellence, we
+        reward winners and top performers with generous prize money rewards.
+        Whether you're a seasoned player or a passionate newcomer, Maverick
+        Habesha offers an exciting opportunity to test your abilities, challenge
+        opponents, and seize the chance to win substantial cash prizes.
+      </p>
 
-        <p>
-            Elevating Experience with Lucrative Rewards
-            At Maverick Habesha, we are dedicated to providing thrilling gaming tournaments and hosting exciting games
-            that
-            keep you on the edge of your seat. With us, winning is not just about the thrill of victory, but also about
-            the
-            handsome rewards that await you. We offer high-value prizes to our winners, ensuring that your gaming skills
-            are
-            recognized and rewarded like never before.
-        </p>
+      <p>
+        Elevating Experience with Lucrative Rewards At Maverick Habesha, we are
+        dedicated to providing thrilling gaming tournaments and hosting exciting
+        games that keep you on the edge of your seat. With us, winning is not
+        just about the thrill of victory, but also about the handsome rewards
+        that await you. We offer high-value prizes to our winners, ensuring that
+        your gaming skills are recognized and rewarded like never before.
+      </p>
 
-        <p class="fs-4 fw-semibold">Refund Policy</p>
-        <p>
-            At Maverick Habesha, we value your satisfaction and strive to ensure a seamless gaming experience. We
-            understand
-            that unforeseen circumstances can sometimes occur, resulting in technical issues or payment challenges. If
-            you
-            encounter any glitches or errors in our system, or if we are unable to process your payment online, we've
-            got
-            you covered. Our refund policy guarantees that we will promptly refund your initial investment or payment,
-            providing you with peace of mind and ensuring your trust in our services.
-        </p>
-        <p> Please note that this refund policy also applies in cases of access code or link
-            errors, where you may face difficulties accessing our games or tournaments. Our goal is to make sure you
-            have a smooth and enjoyable gaming journey, and we take full responsibility for any hiccups along the way.
-            Join Maverick Habesha today, knowing that your satisfaction and financial security are our top priorities.
-        </p>
+      <p class="fs-4 fw-semibold">Refund Policy</p>
+      <p>
+        At Maverick Habesha, we value your satisfaction and strive to ensure a
+        seamless gaming experience. We understand that unforeseen circumstances
+        can sometimes occur, resulting in technical issues or payment
+        challenges. If you encounter any glitches or errors in our system, or if
+        we are unable to process your payment online, we've got you covered. Our
+        refund policy guarantees that we will promptly refund your initial
+        investment or payment, providing you with peace of mind and ensuring
+        your trust in our services.
+      </p>
+      <p>
+        Please note that this refund policy also applies in cases of access code
+        or link errors, where you may face difficulties accessing our games or
+        tournaments. Our goal is to make sure you have a smooth and enjoyable
+        gaming journey, and we take full responsibility for any hiccups along
+        the way. Join Maverick Habesha today, knowing that your satisfaction and
+        financial security are our top priorities.
+      </p>
 
+      <p class="fs-4 fw-semibold">Promoting Responsible and Healthy Gaming</p>
+      <p>
+        At Maverick Habesha, we prioritize your well-being. We are committed to
+        promoting responsible gaming practices and maintaining a healthy gaming
+        environment. We believe that gaming should enhance your enjoyment and
+        provide a positive experience without negatively impacting your mental
+        or financial well-being. We encourage our players to embrace a balanced
+        approach to gaming, ensuring a fulfilling and sustainable gaming
+        journey.
+      </p>
 
-        <p class=" fs-4 fw-semibold">Promoting Responsible and Healthy Gaming</p>
-        <p>
-            At Maverick Habesha, we prioritize your well-being. We are committed to promoting responsible gaming
-            practices
-            and maintaining a healthy gaming environment. We believe that gaming should enhance your enjoyment and
-            provide a
-            positive experience without negatively impacting your mental or financial well-being. We encourage our
-            players
-            to embrace a balanced approach to gaming, ensuring a fulfilling and sustainable gaming journey.
-
-        </p>
-
-        <p>
-            Join Maverick Habesha today and embark on an unforgettable gaming adventure where rewards, reliability, and
-            responsible gaming converge. Experience the excitement, reap the benefits, and become a part of our vibrant
-            community.
-        </p>
-
+      <p>
+        Join Maverick Habesha today and embark on an unforgettable gaming
+        adventure where rewards, reliability, and responsible gaming converge.
+        Experience the excitement, reap the benefits, and become a part of our
+        vibrant community.
+      </p>
     </div>
 
     <!-- Footer -->
     <footer class="p-3">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-3 col-md-4 col-12 small mt-4 text-center">
-                    <a href="terms.html" class="text-decoration fw-semibold">Terms</a>
-                    <a href="about.html" class="text-decoration fw-semibold mx-4">About</a>
-                    <a href="terms.html" class="text-decoration fw-semibold">Privacy</a>
-                    <a href="contact.html" class="text-decoration fw-semibold mx-4">Contact</a>
-                </div>
-                <div class="col-lg-4 col-md-4 col-12 text-center mt-3">
-                    <img src="img/logolight1.png" class="" alt="logo" width="170px">
-                    <p class="small">
-                        <span class="small">&copy; 2023 All right reserved Maverick Habesha</span>
-                    </p>
-                </div>
-                <div class="col-lg-3 col-md-4 col-12 mt-4 text-center">
-                    <a href="#" class="bi bi-tiktok fs-5"></a>
-                    <a href="#" class="bi bi-instagram fs-5 mx-5"></a>
-                    <a href="#" class="bi bi-telegram fs-5"></a>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-3 col-md-4 col-12 small mt-4 text-center">
+            <a href="terms.html" class="text-decoration fw-semibold">Terms</a>
+            <a href="about.html" class="text-decoration fw-semibold mx-4"
+              >About</a
+            >
+            <a href="privacy-policy.html" class="text-decoration fw-semibold"
+              >Privacy</a
+            >
+            <a href="contact.html" class="text-decoration fw-semibold mx-4"
+              >Contact</a
+            >
+          </div>
+          <div class="col-lg-4 col-md-4 col-12 text-center mt-3">
+            <img src="img/logolight1.png" class="" alt="logo" width="170px" />
+            <p class="small">
+              <span class="small"
+                >&copy; 2023 All right reserved Maverick Habesha</span
+              >
+            </p>
+          </div>
+          <div class="col-lg-3 col-md-4 col-12 mt-4 text-center">
+            <a href="#" class="bi bi-tiktok fs-5"></a>
+            <a href="#" class="bi bi-instagram fs-5 mx-5"></a>
+            <a href="#" class="bi bi-telegram fs-5"></a>
+          </div>
         </div>
-
+      </div>
     </footer>
 
     <script src="js/script.js"></script>
-
-</body>
-
+  </body>
 </html>
