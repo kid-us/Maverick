@@ -1,276 +1,413 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
     <!-- Bootstrap cdn -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    />
     <!-- Bootstrap Icon-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
     <!-- Animate css -->
-    <link rel="stylesheet" href="css/animate.min.css">
-    <link rel="website icon" href="img/cubes.png">
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <link rel="website icon" href="img/cubes.png" />
     <title>Maverick Tournaments</title>
-</head>
+  </head>
 
-<body class="bg">
+  <body class="bg">
     <!-- Coming Soon message -->
     <div id="coming-soon">
-        <script id="src" src="JS/sweetalert2.all.min.js"></script>
+      <script id="src" src="JS/sweetalert2.all.min.js"></script>
     </div>
 
     <!-- Navbar -->
     <div id="navbar" class="p-3 px-5">
-        <!-- Large Device navbar -->
-        <div class="d-none d-md-block">
-            <div class="float-start ps-5">
-                <a class="navbar-brand" href="index.html">
-                    <img src="img/logolight1.png" alt="logo" width="170px">
-                </a>
-            </div>
-            <div class="float-end pe-5 pt-2 small fw-semibold">
-
-                <!-- Before Login -->
-                <!-- <a href="login.html" class="account-link px-4 py-2 small">Register/Login</a> -->
-
-                <!-- After login -->
-                <a href="#" class="me-5 games-link">Games</a>
-                <span id="username-link" href="login.html" class="cursor bi bi-person-fill"> Jon Doe &nbsp;
-                    <span id="icon-link" class="bi bi-caret-down-fill small"></span>
-                </span>
-            </div>
+      <!-- Large Device navbar -->
+      <div class="d-none d-md-block">
+        <div class="float-start ps-5">
+          <a class="navbar-brand" href="index.html">
+            <img src="img/logolight1.png" alt="logo" width="170px" />
+          </a>
         </div>
-        <!-- Dashboard dropdown -->
-        <div id="dashboard-links" class="hidden py-3 small pe-3 ps-2">
-            <ul>
-                <li><a href="dashboard.html">Profile</a></li>
-                <hr class="my-2">
-                <li><a href="setting.html">Setting</a></li>
-                <hr class="my-2">
-                <li><a href="#">Logout</a></li>
-            </ul>
+        <div class="float-end pe-5 pt-2 small fw-semibold">
+          <!-- Before Login -->
+          <!-- <a href="login.html" class="account-link px-4 py-2 small">Register/Login</a> -->
+
+          <!-- After login -->
+          <a href="#" class="me-5 games-link">Games</a>
+          <span
+            id="username-link"
+            href="login.html"
+            class="cursor bi bi-person-fill"
+          >
+            Jon Doe &nbsp;
+            <span id="icon-link" class="bi bi-caret-down-fill small"></span>
+          </span>
+        </div>
+      </div>
+      <!-- Dashboard dropdown -->
+      <div id="dashboard-links" class="hidden py-3 small pe-3 ps-2">
+        <ul>
+          <li><a href="dashboard.html">Profile</a></li>
+          <hr class="my-2" />
+          <li><a href="setting.html">Setting</a></li>
+          <hr class="my-2" />
+          <li><a href="#">Logout</a></li>
+        </ul>
+      </div>
+
+      <!-- Small device navbar -->
+      <div class="d-block d-md-none">
+        <div class="float-start">
+          <a class="navbar-brand" href="index.html">
+            <img src="img/logolight1.png" alt="logo" width="170px" />
+          </a>
         </div>
 
-        <!-- Small device navbar -->
-        <div class="d-block d-md-none">
-            <div class="float-start">
-                <a class="navbar-brand" href="index.html">
-                    <img src="img/logolight1.png" alt="logo" width="170px">
-                </a>
-            </div>
-
-            <div class="float-end pt-2 small fw-semibold">
-                <p id="menu-btn" class="bi bi-list ms-1"></p>
-            </div>
+        <div class="float-end pt-2 small fw-semibold">
+          <p id="menu-btn" class="bi bi-list ms-1"></p>
         </div>
+      </div>
 
-        <!-- small device menu modal -->
-        <div class="sm-navbar mt-3">
-            <div id="menu-page" class="menu animate__animated animate__bounceInLeft mt-5 hidden">
-                <span id="close-menu" class="nav-item text-danger fs-1 float-end cursor me-5  pe-5">&times;</span>
-                <ul class="pe-5">
+      <!-- small device menu modal -->
+      <div class="sm-navbar mt-3">
+        <div
+          id="menu-page"
+          class="menu animate__animated animate__bounceInLeft mt-5 hidden"
+        >
+          <span
+            id="close-menu"
+            class="nav-item text-danger fs-1 float-end cursor me-5 pe-5"
+            >&times;</span
+          >
+          <ul class="pe-5">
+            <!-- Before Login -->
 
-                    <!-- Before Login -->
-
-                    <!-- <p class="pt-5 pb-3">Account</p>
+            <!-- <p class="pt-5 pb-3">Account</p>
                     <!-- <a href="register.html" class="nav-link account-link px-4 py-2 small">Register</a>
                     </li>
                     <li class="nav-item">
                         <a href="login.html" class="nav-link account-link px-4 py-2 small">Login</a>
                     </li> -->
 
-                    <!-- After Login -->
-                    <ul>
-                        <p class="pt-5 pb-3 fw-semibold bi bi-person-fill fs-4"> Jon Doe</p>
-                        <li><a href="dashboard.html">Profile</a></li>
-                        <li><a href="#" class="games-link">Games</a></li>
-                        <hr class="my-2">
-                        <li><a href="setting.html">Setting</a></li>
-                        <hr class="my-2">
-                        <li><a href="#">Logout</a></li>
-                    </ul>
-                </ul>
-            </div>
+            <!-- After Login -->
+            <ul>
+              <p class="pt-5 pb-3 fw-semibold bi bi-person-fill fs-4">
+                Jon Doe
+              </p>
+              <li><a href="dashboard.html">Profile</a></li>
+              <li><a href="#" class="games-link">Games</a></li>
+              <hr class="my-2" />
+              <li><a href="setting.html">Setting</a></li>
+              <hr class="my-2" />
+              <li><a href="#">Logout</a></li>
+            </ul>
+          </ul>
         </div>
+      </div>
     </div>
 
     <div id="overlay" class="hidden"></div>
 
     <!-- Tournament information modal -->
     <div id="tournament-modal" class="p-4 hidden rounded shadow-lg">
-        <p id="close-modal" class="text-end text-danger fw-semibold fs-5 cursor">x</p>
+      <p id="close-modal" class="text-end text-danger fw-semibold fs-5 cursor">
+        x
+      </p>
     </div>
 
     <!-- Tournaments -->
     <div class="container my-5 fw-semibold">
-        <div class="text-center m-lg-5 my-5 small">
-            <p> Hello <span class="text-warning">Jon Doe</span> Welcome to the tournaments pages here you can browse our
-                Tournaments. Enjoy!</p>
-        </div>
-
-        <!-- Tournaments -->
-        <div class="m-lg-5">
-            <p class="fs-5 fw-semibold">Tournaments</p>
-            <div class="row justify-content-center mt-5">
-
-                <div class="tournament-games view-tournament col-12 my-5 cursor">
-                    <img src="img/fruitninja.jpg" class="rounded tournament-game-img" alt="Tournament"
-                        data-name="Free Fire" data-bid="5,000" data-price="55,250"
-                        data-description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus animi ea nisi voluptatum doloribus nihil ad perferendis aspernatur qui quos aliquid eius facilis corrupti dolores, sit suscipit voluptas velit dolorum."
-                        data-img="fruitninja.jpg" data-tutorial=".jpg" data-first="14,000" data-second="7,500"
-                        data-third="4,000" data-others="1,750">
-
-                    <div class="row small p-lg-5 pt-3">
-                        <div class="col-lg-3 col-6">
-                            <img src="img/fruitninja.jpg" alt="Fruit Ninja" class="rounded" width="50px">
-                            <p class="fs-6 mt-1">Fruit Ninja</p>
-                        </div>
-                        <div class="col-lg-3 col-6">
-                            <p class="fs-5 fw-semibold">Survive and win money</p>
-                        </div>
-                        <div class="col-lg-3 col-6">
-                            <p class="fs-5 fw-semibold">Remaining 50 from 200 players</p>
-                        </div>
-                        <div class="col-lg-3 col-6">
-                            <p class="fs-5 fw-semibold">Winner price: 10,000</p>
-                            <p class="fs-6 fw-semibold">Entry Fee: 1000 etb</p>
-                        </div>
-                    </div>
-                </div>
-
-                <p class="fs-4">Coming Soon</p>
+      <div class="text-center m-lg-5 my-5 small">
+        <p>
+          Hello <span class="text-warning">Jon Doe</span> Welcome to the
+          tournaments pages here you can browse our Tournaments. Enjoy!
+        </p>
+      </div>
 
 
-                <div class="tournament-games games-link col-12 my-5 cursor">
-                    <img src="img/freefire.jpg" class="rounded tournament-game-img" alt="Tournament"
-                        data-name="Free Fire" data-bid="5,000" data-price="55,250"
-                        data-description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus animi ea nisi voluptatum doloribus nihil ad perferendis aspernatur qui quos aliquid eius facilis corrupti dolores, sit suscipit voluptas velit dolorum."
-                        data-img="freefire.jpg" data-tutorial="freefire.jpg" data-first="14,000" data-second="7,500"
-                        data-third="4,000" data-others="1,750">
+      <div class="rounded mb-5">
+        <p>
+        <strong>Order your Game Access Code and Referral Link</strong>
+        <p class="bi-caret-right-fill text-warning">Follow these steps to get started:</p>
+        </p>
 
-                    <div class="row small p-lg-5 pt-3">
-                        <div class="col-lg-3 col-6">
-                            <img src="img/freefire.jpg" alt="" class="rounded" width="50px">
-                            <p class="fs-6 mt-1">Free Fire</p>
-                        </div>
-                        <div class="col-lg-3 col-6">
-                            <p class="fs-5 fw-semibold">Survive and win money</p>
-                        </div>
-                        <div class="col-lg-3 col-6">
-                            <p class="fs-5 fw-semibold">Remaining 50 from 200 players</p>
-                        </div>
-                        <div class="col-lg-3 col-6">
-                            <p class="fs-5 fw-semibold">Winner price: 10,000</p>
-                            <p class="fs-6 fw-semibold">Entry Fee: 1000 etb</p>
-                        </div>
-                    </div>
-                </div>
+        <ol class="list-group">
+        <li class="list-group-item">
+            <strong>Step 1:</strong> Start by messaging our ordering bot,
+            <a
+            class="text-warning"
+            href="https://t.me/Maverick456_bot"
+            target="_blank"
+            >@Maverick456_bot</a
+            >.
+        </li>
+        <li class="list-group-item">
+            <strong>Step 2:</strong> Choose your desired product: either the
+            Game Access Code or Referral Link.
+        </li>
+        <li class="list-group-item">
+            <strong>Step 3:</strong> Once you've made your selection, proceed to
+            place your order.
+        </li>
+        <li class="list-group-item">
+            <strong>Step 4:</strong> For payment, send a screenshot of your
+            payment confirmation to our telle birr "0967438422" (check the entry
+            fees and payment on the website)
+        </li>
+        <li class="list-group-item">
+            <strong>Step 5:</strong> Once your payment is confirmed, you will
+            receive your ordered Game Access Code or Referral Link from our bot,
+            <a
+            class="text-warning"
+            href="https://t.me/Messages56t_bot"
+            target="_blank"
+            >@Messages56t_bot</a
+            >.
+        </li>
+        </ol>
 
-                <div class="tournament-games games-link col-12 my-5 cursor">
-                    <img src="img/survival.jpg" class="rounded tournament-game-img" alt="Tournament"
-                        data-name="Rules of Survival" data-bid="1,000" data-price="80,000"
-                        data-description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus animi ea nisi voluptatum doloribus nihil ad perferendis aspernatur qui quos aliquid eius facilis corrupti dolores, sit suscipit voluptas velit dolorum."
-                        data-img="survival.jpg" data-tutorial="survival.jpg">
-                    <div class=" row small p-lg-5 pt-3">
-                        <div class="col-lg-3 col-6">
-                            <img src="img/survival.jpg" alt="" class="rounded" width="50px">
-                            <p class="fs-6 mt-1">Rules of Survival</p>
-                        </div>
-                        <div class="col-lg-3 col-6">
-                            <p class="fs-5 fw-semibold">Survive and win money</p>
-                        </div>
-                        <div class="col-lg-3 col-6">
-                            <p class="fs-5 fw-semibold">Remaining 50 from 200 players</p>
-                        </div>
-                        <div class="col-lg-3 col-6">
-                            <p class="fs-5 fw-semibold">Winner price: 10,000</p>
-                            <p class="fs-6 fw-semibold">Entry Fee: 1000 etb</p>
-                        </div>
-                    </div>
-                </div>
+        <button
+        id="withdraw-btn"
+        class="btns px-5 small mt-3"
+        onClick="window.open('https://t.me/Maverick456_bot', '_blank')"
+        >
+        Go to the Bot
+        </button>
+    </div>
 
-                <div class="tournament-games games-link col-12 my-5 cursor">
-                    <img src="img/rider.jpg" class="rounded tournament-game-img" alt="Tournament" data-name="Rider"
-                        data-bid="1,000" data-price="20,000"
-                        data-description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus animi ea nisi voluptatum doloribus nihil ad perferendis aspernatur qui quos aliquid eius facilis corrupti dolores, sit suscipit voluptas velit dolorum."
-                        data-img="rider.jpg" data-tutorial="rider.jpg">
+      <!-- Tournaments -->
+      <div class="m-lg-5">
+        <p class="fs-5 fw-semibold">Tournaments</p>
+        <div class="row justify-content-center mt-5">
+          <div class="tournament-games view-tournament col-12 my-5 cursor">
+            <img
+              src="img/fruitninja.jpg"
+              class="rounded tournament-game-img"
+              alt="Tournament"
+              data-name="Free Fire"
+              data-bid="5,000"
+              data-price="55,250"
+              data-description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus animi ea nisi voluptatum doloribus nihil ad perferendis aspernatur qui quos aliquid eius facilis corrupti dolores, sit suscipit voluptas velit dolorum."
+              data-img="fruitninja.jpg"
+              data-tutorial=".jpg"
+              data-first="14,000"
+              data-second="7,500"
+              data-third="4,000"
+              data-others="1,750"
+            />
 
-                    <div class="row small p-lg-5 pt-3">
-                        <div class="col-lg-3 col-6">
-                            <img src="img/rider.jpg" alt="" class="rounded" width="50px">
-                            <p class="fs-6 mt-1">Rider</p>
-                        </div>
-                        <div class="col-lg-3 col-6">
-                            <p class="fs-5 fw-semibold">Survive and win money</p>
-                        </div>
-                        <div class="col-lg-3 col-6">
-                            <p class="fs-5 fw-semibold">Remaining 50 from 200 players</p>
-                        </div>
-                        <div class="col-lg-3 col-6">
-                            <p class="fs-5 fw-semibold">Winner price: 10,000</p>
-                            <p class="fs-6 fw-semibold">Entry Fee: 1000 etb</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tournament-games games-link col-12 my-5 cursor">
-                    <img src="img/subwaysurf.jpg" class="rounded tournament-game-img" alt="Tournament"
-                        data-name="Subway Surf" data-bid="1,000" data-price="60,000"
-                        data-description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus animi ea nisi voluptatum doloribus nihil ad perferendis aspernatur qui quos aliquid eius facilis corrupti dolores, sit suscipit voluptas velit dolorum."
-                        data-img="subwaysurf.jpg" data-tutorial="subwaysurf.jpg">
-                    <div class=" row small p-lg-5 pt-3">
-                        <div class="col-lg-3 col-6">
-                            <img src="img/subwaysurf.jpg" alt="" class="rounded" width="50px">
-                            <p class="fs-6 mt-1">Subway Surf</p>
-                        </div>
-                        <div class="col-lg-3 col-6">
-                            <p class="fs-5 fw-semibold">Survive and win money</p>
-                        </div>
-                        <div class="col-lg-3 col-6">
-                            <p class="fs-5 fw-semibold">Remaining 50 from 200 players</p>
-                        </div>
-                        <div class="col-lg-3 col-6">
-                            <p class="fs-5 fw-semibold">Winner price: 10,000</p>
-                            <p class="fs-6 fw-semibold">Entry Fee: 1000 etb</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="row small p-lg-5 pt-3">
+              <div class="col-lg-3 col-6">
+                <img
+                  src="img/fruitninja.jpg"
+                  alt="Fruit Ninja"
+                  class="rounded"
+                  width="50px"
+                />
+                <p class="fs-6 mt-1">Fruit Ninja</p>
+              </div>
+              <div class="col-lg-3 col-6">
+                <p class="fs-5 fw-semibold">Survive and win money</p>
+              </div>
+              <div class="col-lg-3 col-6">
+                <p class="fs-5 fw-semibold">Remaining 50 from 200 players</p>
+              </div>
+              <div class="col-lg-3 col-6">
+                <p class="fs-5 fw-semibold">Winner price: 10,000</p>
+                <p class="fs-6 fw-semibold">Entry Fee: 1000 etb</p>
+              </div>
             </div>
+          </div>
+
+          <p class="fs-4">Coming Soon</p>
+
+          <div class="tournament-games games-link col-12 my-5 cursor">
+            <img
+              src="img/freefire.jpg"
+              class="rounded tournament-game-img"
+              alt="Tournament"
+              data-name="Free Fire"
+              data-bid="5,000"
+              data-price="55,250"
+              data-description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus animi ea nisi voluptatum doloribus nihil ad perferendis aspernatur qui quos aliquid eius facilis corrupti dolores, sit suscipit voluptas velit dolorum."
+              data-img="freefire.jpg"
+              data-tutorial="freefire.jpg"
+              data-first="14,000"
+              data-second="7,500"
+              data-third="4,000"
+              data-others="1,750"
+            />
+
+            <div class="row small p-lg-5 pt-3">
+              <div class="col-lg-3 col-6">
+                <img
+                  src="img/freefire.jpg"
+                  alt=""
+                  class="rounded"
+                  width="50px"
+                />
+                <p class="fs-6 mt-1">Free Fire</p>
+              </div>
+              <div class="col-lg-3 col-6">
+                <p class="fs-5 fw-semibold">Survive and win money</p>
+              </div>
+              <div class="col-lg-3 col-6">
+                <p class="fs-5 fw-semibold">Remaining 50 from 200 players</p>
+              </div>
+              <div class="col-lg-3 col-6">
+                <p class="fs-5 fw-semibold">Winner price: 10,000</p>
+                <p class="fs-6 fw-semibold">Entry Fee: 1000 etb</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="tournament-games games-link col-12 my-5 cursor">
+            <img
+              src="img/survival.jpg"
+              class="rounded tournament-game-img"
+              alt="Tournament"
+              data-name="Rules of Survival"
+              data-bid="1,000"
+              data-price="80,000"
+              data-description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus animi ea nisi voluptatum doloribus nihil ad perferendis aspernatur qui quos aliquid eius facilis corrupti dolores, sit suscipit voluptas velit dolorum."
+              data-img="survival.jpg"
+              data-tutorial="survival.jpg"
+            />
+            <div class="row small p-lg-5 pt-3">
+              <div class="col-lg-3 col-6">
+                <img
+                  src="img/survival.jpg"
+                  alt=""
+                  class="rounded"
+                  width="50px"
+                />
+                <p class="fs-6 mt-1">Rules of Survival</p>
+              </div>
+              <div class="col-lg-3 col-6">
+                <p class="fs-5 fw-semibold">Survive and win money</p>
+              </div>
+              <div class="col-lg-3 col-6">
+                <p class="fs-5 fw-semibold">Remaining 50 from 200 players</p>
+              </div>
+              <div class="col-lg-3 col-6">
+                <p class="fs-5 fw-semibold">Winner price: 10,000</p>
+                <p class="fs-6 fw-semibold">Entry Fee: 1000 etb</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="tournament-games games-link col-12 my-5 cursor">
+            <img
+              src="img/rider.jpg"
+              class="rounded tournament-game-img"
+              alt="Tournament"
+              data-name="Rider"
+              data-bid="1,000"
+              data-price="20,000"
+              data-description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus animi ea nisi voluptatum doloribus nihil ad perferendis aspernatur qui quos aliquid eius facilis corrupti dolores, sit suscipit voluptas velit dolorum."
+              data-img="rider.jpg"
+              data-tutorial="rider.jpg"
+            />
+
+            <div class="row small p-lg-5 pt-3">
+              <div class="col-lg-3 col-6">
+                <img src="img/rider.jpg" alt="" class="rounded" width="50px" />
+                <p class="fs-6 mt-1">Rider</p>
+              </div>
+              <div class="col-lg-3 col-6">
+                <p class="fs-5 fw-semibold">Survive and win money</p>
+              </div>
+              <div class="col-lg-3 col-6">
+                <p class="fs-5 fw-semibold">Remaining 50 from 200 players</p>
+              </div>
+              <div class="col-lg-3 col-6">
+                <p class="fs-5 fw-semibold">Winner price: 10,000</p>
+                <p class="fs-6 fw-semibold">Entry Fee: 1000 etb</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="tournament-games games-link col-12 my-5 cursor">
+            <img
+              src="img/subwaysurf.jpg"
+              class="rounded tournament-game-img"
+              alt="Tournament"
+              data-name="Subway Surf"
+              data-bid="1,000"
+              data-price="60,000"
+              data-description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus animi ea nisi voluptatum doloribus nihil ad perferendis aspernatur qui quos aliquid eius facilis corrupti dolores, sit suscipit voluptas velit dolorum."
+              data-img="subwaysurf.jpg"
+              data-tutorial="subwaysurf.jpg"
+            />
+            <div class="row small p-lg-5 pt-3">
+              <div class="col-lg-3 col-6">
+                <img
+                  src="img/subwaysurf.jpg"
+                  alt=""
+                  class="rounded"
+                  width="50px"
+                />
+                <p class="fs-6 mt-1">Subway Surf</p>
+              </div>
+              <div class="col-lg-3 col-6">
+                <p class="fs-5 fw-semibold">Survive and win money</p>
+              </div>
+              <div class="col-lg-3 col-6">
+                <p class="fs-5 fw-semibold">Remaining 50 from 200 players</p>
+              </div>
+              <div class="col-lg-3 col-6">
+                <p class="fs-5 fw-semibold">Winner price: 10,000</p>
+                <p class="fs-6 fw-semibold">Entry Fee: 1000 etb</p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
 
     <!-- Footer -->
     <footer class="p-3">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-3 col-md-4 col-12 small mt-4 text-center">
-                    <a href="terms.html" class="text-decoration fw-semibold">Terms</a>
-                    <a href="about.html" class="text-decoration fw-semibold mx-4">About</a>
-                    <a href="terms.html" class="text-decoration fw-semibold">Privacy</a>
-                    <a href="contact.html" class="text-decoration fw-semibold mx-4">Contact</a>
-                </div>
-                <div class="col-lg-4 col-md-4 col-12 text-center mt-3">
-                    <img src="img/logolight1.png" class="" alt="logo" width="170px">
-                    <p class="small">
-                        <span class="small">&copy; 2023 All right reserved Maverick Habesha</span>
-                    </p>
-                </div>
-                <div class="col-lg-3 col-md-4 col-12 mt-4 text-center">
-                    <a href="#" class="bi bi-tiktok fs-5"></a>
-                    <a href="#" class="bi bi-instagram fs-5 mx-5"></a>
-                    <a href="#" class="bi bi-telegram fs-5"></a>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-3 col-md-4 col-12 small mt-4 text-center">
+            <a href="terms.html" class="text-decoration fw-semibold">Terms</a>
+            <a href="about.html" class="text-decoration fw-semibold mx-4"
+              >About</a
+            >
+            <a href="privacy-policy.html" class="text-decoration fw-semibold"
+              >Privacy</a
+            >
+            <a href="contact.html" class="text-decoration fw-semibold mx-4"
+              >Contact</a
+            >
+          </div>
+          <div class="col-lg-4 col-md-4 col-12 text-center mt-3">
+            <img src="img/logolight1.png" class="" alt="logo" width="170px" />
+            <p class="small">
+              <span class="small"
+                >&copy; 2023 All right reserved Maverick Habesha</span
+              >
+            </p>
+          </div>
+          <div class="col-lg-3 col-md-4 col-12 mt-4 text-center">
+            <a href="#" class="bi bi-tiktok fs-5"></a>
+            <a href="#" class="bi bi-instagram fs-5 mx-5"></a>
+            <a href="#" class="bi bi-telegram fs-5"></a>
+          </div>
         </div>
-
+      </div>
     </footer>
 
     <script src="js/script.js"></script>
     <script src="js/jar.amd.min.js"></script>
     <script src="js/cookie.js"></script>
-</body>
-
+  </body>
 </html>
