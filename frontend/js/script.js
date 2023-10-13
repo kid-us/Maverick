@@ -1,82 +1,107 @@
-// Sticky navbar 
-window.onscroll = function () { myFunction() };
+// Sticky navbar
+window.onscroll = function () {
+  myFunction();
+};
 
 var navbar = document.getElementById("navbar");
 var sticky = navbar.offsetTop;
 
 function myFunction() {
-    if (window.pageYOffset >= sticky) {
-        navbar.classList.add("sticky")
-    } else {
-        navbar.classList.remove("sticky");
-    }
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky");
+  } else {
+    navbar.classList.remove("sticky");
+  }
 }
 
-// Small device navbar 
+// Small device navbar
 const menuBtn = document.getElementById("menu-btn");
 if (menuBtn) {
+  const menuPage = document.getElementById("menu-page");
+  const closeMenuBtn = document.getElementById("close-menu");
 
-    const menuPage = document.getElementById("menu-page");
-    const closeMenuBtn = document.getElementById("close-menu");
+  menuBtn.addEventListener("click", () => {
+    if (menuPage.classList.contains("hidden")) {
+      menuPage.classList.remove("hidden");
+    } else {
+      menuPage.classList.add("hidden");
+    }
+  });
 
-    menuBtn.addEventListener("click", () => {
-        if (menuPage.classList.contains("hidden")) {
-            menuPage.classList.remove("hidden");
-        } else {
-            menuPage.classList.add("hidden");
-        }
-    });
-
-    closeMenuBtn.addEventListener("click", () => {
-        menuPage.classList.add("hidden");
-    });
-
+  closeMenuBtn.addEventListener("click", () => {
+    menuPage.classList.add("hidden");
+  });
 }
 
 // Header
 const openHeader = document.getElementById("open-header");
 if (openHeader) {
-    const headerModalPage = document.getElementById("header-modal-page");
+  const headerModalPage = document.getElementById("header-modal-page");
 
-    const closeHeader = document.getElementById("close-header");
-    openHeader.addEventListener("click", () => {
-        headerModalPage.classList.remove("hidden");
-    });
+  const closeHeader = document.getElementById("close-header");
+  openHeader.addEventListener("click", () => {
+    headerModalPage.classList.remove("hidden");
+  });
 
-    closeHeader.addEventListener("click", () => {
-        headerModalPage.classList.add("hidden");
-    });
+  closeHeader.addEventListener("click", () => {
+    headerModalPage.classList.add("hidden");
+  });
 }
 
 // Dashboard username Link script
 const usernameLink = document.getElementById("username-link");
 const dashboardLinksPage = document.getElementById("dashboard-links");
 const iconLink = document.getElementById("icon-link");
-usernameLink.addEventListener("click", () => {
-    if (dashboardLinksPage.classList.contains('hidden')) {
-        dashboardLinksPage.classList.remove("hidden");
-        iconLink.classList.remove("bi-caret-down-fill");
-        iconLink.classList.add("bi-caret-up-fill");
+if (usernameLink) {
+  usernameLink.addEventListener("click", () => {
+    if (dashboardLinksPage.classList.contains("hidden")) {
+      dashboardLinksPage.classList.remove("hidden");
+      iconLink.classList.remove("bi-caret-down-fill");
+      iconLink.classList.add("bi-caret-up-fill");
     } else {
-        dashboardLinksPage.classList.add("hidden");
-        iconLink.classList.remove("bi-caret-up-fill");
-        iconLink.classList.add("bi-caret-down-fill");
+      dashboardLinksPage.classList.add("hidden");
+      iconLink.classList.remove("bi-caret-up-fill");
+      iconLink.classList.add("bi-caret-down-fill");
     }
-});
+  });
+}
 
 // Coming Soon Message
 const gamesContainer = document.querySelectorAll(".games-link");
 gamesContainer.forEach((game) => {
-    game.addEventListener("click", () => {
-        Swal.fire({
-            position: 'center',
-            icon: 'success',
-            text: 'Maverick Habesha Games',
-            title: 'Coming Soon!',
-            color: 'green',
-            background: '#FCE4EC',
-            showConfirmButton: false,
-            timer: 5500,
-        })
+  game.addEventListener("click", () => {
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      text: "Maverick Habesha Games",
+      title: "Coming Soon!",
+      color: "green",
+      background: "#FCE4EC",
+      showConfirmButton: false,
+      timer: 5500,
     });
-})
+  });
+});
+
+// Advert
+const showMoreBtn = document.getElementById("show-more-btn");
+const hiddenBlog = document.querySelectorAll(".hidden-blog");
+const joinUs = document.getElementById("join-us");
+const showLessBtn = document.getElementById("show-less");
+showMoreBtn.addEventListener("click", () => {
+  hiddenBlog.forEach((blog) => {
+    blog.classList.remove("hidden");
+    joinUs.classList.remove("hidden");
+    showLessBtn.classList.remove("hidden");
+    showMoreBtn.classList.add("hidden");
+  });
+});
+
+showLessBtn.addEventListener("click", () => {
+  hiddenBlog.forEach((blog) => {
+    blog.classList.add("hidden");
+    joinUs.classList.add("hidden");
+    showLessBtn.classList.add("hidden");
+    showMoreBtn.classList.remove("hidden");
+  });
+});
